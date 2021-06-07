@@ -1,0 +1,44 @@
+name: 本章说 ·
+
+on:
+  schedule:
+    - cron: '20 1,22 * * *'
+  watch:
+    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id # 自己点的 start
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install NPM dependencies
+        run: npm install got
+
+      - name: Run
+        run: |
+          node index.js ${{secrets.CSRF_TOKEN}}
+
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions@noreply.github.com"
+          git config --local user.name "github-actions"
+          git add .
+          git commit -m "Update `date +%Y/%m/%d`" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
