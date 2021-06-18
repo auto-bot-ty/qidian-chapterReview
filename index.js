@@ -15,7 +15,7 @@ const getReview = async (bookId, segmentSize, start) => {
     .slice(list.length - start, list.length)
     .forEach(
       async (item) =>
-        await ProcessChapterReview(bookId, item.id, item.cN, segmentSize, csrfToken)
+        await ProcessChapterReview(bookId, item.id, item.cN, csrfToken)
     );
 };
 

@@ -2,7 +2,7 @@ const got = require("got");
 let fs = require("fs");
 let reviewList = [];
 
-const ProcessChapterReview = async (bookId, chapterId, cN, segmentSize, csrfToken) => {
+const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
   const path = `./output/${bookId}`;
   fs.access(`${path}`, (err) => {
     if (err) {
@@ -15,20 +15,20 @@ const ProcessChapterReview = async (bookId, chapterId, cN, segmentSize, csrfToke
       });
     }
   });
-  // to do
-  let segmentIdArr = new Array(segmentSize);
-  for (let i = 1; i < segmentIdArr.length; i++) {
-    segmentIdArr[i] = i;
-  }
+
+  const reviewSummaryUrl = `https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}`;
+  const response = await got.get(reviewSummaryUrl);
+  const reviewSummary = JSON.parse(response.body).data.list;
+  reviewSummary.sort((a, b) => { return a.segmentId - b.segmentId })
 
   const out = await Promise.all(
-    segmentIdArr.map(async (segmentId) => {
-      const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${segmentId}&type=2&page=1&pageSize=20`;
+    reviewSummary.map(async (i) => {
+      const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${i.segmentId}&type=2&page=1&pageSize=${i.reviewNum}`;
       const response = await got.get(chapterReviewUrl);
       const list = JSON.parse(response.body).data.list;
       if (list.length !== 0) {
         reviewList = list.map((item) => `>--- ${item.content}<br>\n`);
-        reviewList.unshift(`\n[${segmentId}] ${list[0].quoteContent}\n`);
+        reviewList.unshift(`\n[${i.segmentId}] ${list[0].quoteContent}\n`);
         return Promise.resolve(reviewList);
       }
     })

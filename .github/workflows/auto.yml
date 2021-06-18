@@ -2,7 +2,7 @@ name: 本章说 ·
 
 on:
   schedule:
-    - cron: '20 1,22 * * *'
+    - cron: "0 3,12,22 * * *"
   watch:
     types: [started]
 
