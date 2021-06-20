@@ -6,6 +6,10 @@ const csrfToken = process.argv[2];
 const books = JSON.parse(fs.readFileSync(config)).books;
 
 const getReview = async (bookId, start) => {
+  if (csrfToken == "") {
+    console.log('csrfToken配置有误，请检查！');
+    return false;
+  }
   const categoryUrl = `https://book.qidian.com/ajax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const response = await got.get(categoryUrl);
   const vs = JSON.parse(response.body).data.vs;

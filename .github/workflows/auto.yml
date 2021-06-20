@@ -2,7 +2,7 @@ name: 本章说 ·
 
 on:
   schedule:
-    - cron: '00 3,12,22 * * *'
+    - cron: "00 3,12,22 * * *"
   watch:
     types: [started]
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Run
         run: |
-          node index.js ${{secrets.CSRF_TOKEN}}
+          node index.js '${{secrets.CSRF_TOKEN}}'
 
       - name: Commit files
         env:
@@ -44,3 +44,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
+
+      - name: Telegram push
+        run: node push.js '${{ secrets.TELEGRAM_TO }}' '${{ secrets.TELEGRAM_TOKEN }}' '${{ github.event_name }}' '${{github.repository}}'
