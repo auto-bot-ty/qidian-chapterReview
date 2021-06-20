@@ -5,7 +5,7 @@ const { ProcessChapterReview } = require("./utils");
 const csrfToken = process.argv[2];
 const books = JSON.parse(fs.readFileSync(config)).books;
 
-const getReview = async (bookId, segmentSize, start) => {
+const getReview = async (bookId, start) => {
   const categoryUrl = `https://book.qidian.com/ajax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const response = await got.get(categoryUrl);
   const vs = JSON.parse(response.body).data.vs;
@@ -21,5 +21,5 @@ const getReview = async (bookId, segmentSize, start) => {
 
 books.forEach(
   async (item) =>
-    await getReview(item.bookId, item.segmentSize, item.start)
+    await getReview(item.bookId, item.start)
 );
