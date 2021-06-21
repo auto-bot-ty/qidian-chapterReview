@@ -3,8 +3,8 @@ const chatId = process.argv[2];
 const accessToken = process.argv[3];
 const eventName = process.argv[4];
 const repository = process.argv[5];
-const telegramPush = () => {
-    if (chatId == "" || accessToken == "") {
+async function telegramPush() {
+    if (chatId === "" || accessToken === "") {
         console.log('推送配置有误，请检查！');
         return false;
     }
