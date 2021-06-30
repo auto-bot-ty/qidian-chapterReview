@@ -34,15 +34,13 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
   fs.writeFile(
     `${path}/${cN}.md`,
     out.join("").replace(/,/g, ""),
-    {
-      flag: "w",
-      encoding: "utf-8",
-    },
-    function (err) {
+    { flag: "w" },
+    (err) => {
       console.log(err ? "写入失败" : "写入成功");
     }
   );
 };
+
 module.exports = {
   ProcessChapterReview,
 };
