@@ -30,7 +30,7 @@ jobs:
 
       - name: Run
         run: |
-          node index.js '${{secrets.CSRF_TOKEN}}'
+          node index.js ${{secrets.CSRF_TOKEN}}
 
       - name: Commit files
         env:
