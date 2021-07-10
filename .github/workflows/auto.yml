@@ -25,7 +25,7 @@ jobs:
 
       - name: Install NPM dependencies
         run: |
-          npm install got
+          npm install got last-commit-log
           npm i --save messaging-api-telegram
 
       - name: Run
@@ -48,4 +48,4 @@ jobs:
           branch: ${{ github.ref }}
 
       - name: Telegram push
-        run: node push.js '${{ secrets.TELEGRAM_TO }}' '${{ secrets.TELEGRAM_TOKEN }}' '${{ github.event_name }}' '${{github.repository}}'
+        run: node push.js '${{ secrets.TELEGRAM_TO }}' '${{ secrets.TELEGRAM_TOKEN }}' '${{ github.event_name }}'

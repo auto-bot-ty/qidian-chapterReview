@@ -36,7 +36,7 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
     out.join("").replace(/,/g, ""),
     { flag: "w" },
     (err) => {
-      console.log(err ? "写入失败" : "写入成功");
+      console.log(err ? "写入失败！" : "写入成功！");
     }
   );
 };
