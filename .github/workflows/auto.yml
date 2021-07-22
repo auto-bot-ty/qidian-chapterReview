@@ -24,9 +24,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install NPM dependencies
-        run: |
-          npm install got last-commit-log
-          npm i --save messaging-api-telegram
+        run: npm i got last-commit-log messaging-api-telegram
 
       - name: Run
         run: |
