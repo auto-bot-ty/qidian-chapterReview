@@ -27,8 +27,7 @@ jobs:
         run: npm i got last-commit-log messaging-api-telegram
 
       - name: Run
-        run: |
-          node index.js
+        run: node index.js
 
       - name: Commit files
         env:
@@ -46,4 +45,4 @@ jobs:
           branch: ${{ github.ref }}
 
       - name: Telegram push
-        run: node push.js '${{ secrets.TELEGRAM_TO }}' '${{ secrets.TELEGRAM_TOKEN }}' '${{ github.event_name }}'
+        run: node push.js ${{ secrets.TELEGRAM_TO }} ${{ secrets.TELEGRAM_TOKEN }} ${{ github.event_name }}

@@ -1,16 +1,9 @@
 const got = require("got");
-const fs = require("fs");
-const config = "./config.json";
-const csrfToken = process.argv[2];
+const books = require("./config.json").books;
 const { ProcessChapterReview } = require("./utils");
-const books = JSON.parse(fs.readFileSync(config)).books;
+const csrfToken = '4H73EIrxxJaMWelkAN0MWZaU3SHGWkefJQQzlHWS';
 
 async function getReivew() {
-  if (csrfToken === "") {
-    console.log("csrfToken 配置有误，请检查！");
-    return false;
-  }
-
   for (const item of books) {
     const categoryUrl = `https://book.qidian.com/ajax/book/category?_csrfToken=${csrfToken}&bookId=${item.bookId}`;
     const response = await got.get(categoryUrl);
