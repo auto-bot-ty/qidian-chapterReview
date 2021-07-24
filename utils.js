@@ -6,7 +6,7 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
   fs.access(path, (err) => {
     if (err) {
       fs.mkdir(path, { recursive: true }, (err) => {
-        if (err) return false;
+        if (err) throw err;
       });
     }
   });
