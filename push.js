@@ -5,10 +5,7 @@ const accessToken = process.argv[3];
 const eventName = process.argv[4];
 
 const telegramPush = () => {
-  if (!chatId || !accessToken) {
-    console.log("推送配置有误，请检查！");
-    return false;
-  }
+  if (!chatId || !accessToken) throw "推送配置有误，请检查！";
   const lcl = new LCL();
   const commit = lcl.getLastCommitSync();
   const client = new TelegramClient({ accessToken });
