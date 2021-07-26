@@ -1,7 +1,7 @@
 const got = require("got");
 const books = require("./config.json").books;
 const { ProcessChapterReview } = require("./utils");
-const csrfToken = '4H73EIrxxJaMWelkAN0MWZaU3SHGWkefJQQzlHWS';
+const csrfToken = "4H73EIrxxJaMWelkAN0MWZaU3SHGWkefJQQzlHWS";
 
 async function getReivew() {
   for (const item of books) {
@@ -12,6 +12,9 @@ async function getReivew() {
     const list = vs[vs.length - 1].cs;
     const newList = list.slice(list.length - item.start, list.length);
     for (const e of newList) {
+      if (item.drift) {
+        e.cN = `第${e.uuid - item.drift}章 ${e.cN.split("章：")[1]}`;
+      }
       await ProcessChapterReview(item.bookId, e.id, e.cN, csrfToken);
     }
   }
