@@ -12,9 +12,7 @@ async function getReivew() {
     const list = vs[vs.length - 1].cs;
     const newList = list.slice(list.length - item.start, list.length);
     for (const e of newList) {
-      if (item.drift) {
-        e.cN = `第${e.uuid - item.drift}章 ${e.cN.split("章：")[1]}`;
-      }
+      if (item.drift) e.cN = `[${e.uuid}] ${e.cN}`;
       await ProcessChapterReview(item.bookId, e.id, e.cN, csrfToken);
     }
   }
