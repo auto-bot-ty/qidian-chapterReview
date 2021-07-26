@@ -5,6 +5,7 @@ const csrfToken = '4H73EIrxxJaMWelkAN0MWZaU3SHGWkefJQQzlHWS';
 
 async function getReivew() {
   for (const item of books) {
+    if (!item.start) continue;
     const categoryUrl = `https://book.qidian.com/ajax/book/category?_csrfToken=${csrfToken}&bookId=${item.bookId}`;
     const response = await got.get(categoryUrl);
     const vs = JSON.parse(response.body).data.vs;
