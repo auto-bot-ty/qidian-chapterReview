@@ -20,13 +20,17 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
 
   const out = await Promise.all(
     reviewSummary.map(async (item) => {
-      const pageSize = item.reviewNum > 100 ? 100 : item.reviewNum;
+      const pageSize = item.reviewNum > 98 ? "98" : item.reviewNum;
       const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${pageSize}`;
       const response = await got.get(chapterReviewUrl);
       const list = JSON.parse(response.body).data.list;
       if (list.length !== 0) {
-        let reviewList = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
-        reviewList.unshift(`\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`);
+        let reviewList = list.map(
+          (item) => `>--- ${item.content.trim()}<br>\n`
+        );
+        reviewList.unshift(
+          `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`
+        );
         return Promise.resolve(reviewList);
       }
     })
@@ -37,7 +41,7 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
     out.join("").replace(/,/g, ""),
     { flag: "w" },
     (err) => {
-      console.log(err ? "写入失败！" : "写入成功！");
+      console.log(err ? `${cN} 写入失败！` : `${cN} 写入成功！`);
     }
   );
 };
