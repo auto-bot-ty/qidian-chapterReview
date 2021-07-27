@@ -25,20 +25,18 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
       const response = await got.get(chapterReviewUrl);
       try {
         const list = JSON.parse(response.body).data.list;
-        if (list.length !== 0) {
-          let reviewList = list.map(
-            (item) => `>--- ${item.content.trim()}<br>\n`
-          );
-          reviewList.unshift(
-            `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`
-          );
-          return Promise.resolve(reviewList);
-        }
+        let reviewList = list.map(
+          (item) => `>--- ${item.content.trim()}<br>\n`
+        );
+        reviewList.unshift(
+          `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`
+        );
+        return reviewList;
       } catch (err) {
         console.log(
-          `[error] invalid list (${item.segmentId}) \n---response: ${
+          `[error] invalid list (${item.segmentId})\n---response: ${
             JSON.parse(response.body).msg
-          } \n---chapterReviewUrl: ${chapterReviewUrl}`
+          }\n---chapterReviewUrl: ${chapterReviewUrl}`
         );
       }
     })
