@@ -23,15 +23,23 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
       const pageSize = item.reviewNum > 98 ? "98" : item.reviewNum;
       const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${pageSize}`;
       const response = await got.get(chapterReviewUrl);
-      const list = JSON.parse(response.body).data.list;
-      if (list.length !== 0) {
-        let reviewList = list.map(
-          (item) => `>--- ${item.content.trim()}<br>\n`
+      try {
+        const list = JSON.parse(response.body).data.list;
+        if (list.length !== 0) {
+          let reviewList = list.map(
+            (item) => `>--- ${item.content.trim()}<br>\n`
+          );
+          reviewList.unshift(
+            `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`
+          );
+          return Promise.resolve(reviewList);
+        }
+      } catch (err) {
+        console.log(
+          `[error] invalid list (${item.segmentId}) \n---response: ${
+            JSON.parse(response.body).msg
+          } \n---chapterReviewUrl: ${chapterReviewUrl}`
         );
-        reviewList.unshift(
-          `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`
-        );
-        return Promise.resolve(reviewList);
       }
     })
   );
