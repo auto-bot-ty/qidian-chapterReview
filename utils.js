@@ -38,6 +38,7 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
             JSON.parse(response.body).msg
           }\n---chapterReviewUrl: ${chapterReviewUrl}`
         );
+        return `\n[${item.segmentId}] invalid list\n`;
       }
     })
   );
