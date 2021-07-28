@@ -10,7 +10,10 @@ async function getReivew() {
     // const categoryUrl = `https://book.qidian.com/ajax/book/category?_csrfToken=${csrfToken}&bookId=${item.bookId}`;
     const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${item.bookId}`;
     const response = await got.get(categoryUrl);
-    const vs = JSON.parse(response.body).data.vs;
+    const data = JSON.parse(response.body).data;
+    const vs = data.vs;
+    const bookName = data.bookName;
+    console.log(`${bookName}\n================================`);
     const list = vs[vs.length - 1].cs;
     const newList = list.slice(list.length - item.start, list.length);
     for (const e of newList) {
