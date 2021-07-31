@@ -34,9 +34,7 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
         return reviewList;
       } catch (err) {
         console.log(
-          `[error] invalid list (${item.segmentId})\n---response: ${
-            JSON.parse(response.body).msg
-          }\n---chapterReviewUrl: ${chapterReviewUrl}`
+          `[error] invalid list (${item.segmentId})\n---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`
         );
         return `\n[${item.segmentId}] invalid list\n`;
       }
