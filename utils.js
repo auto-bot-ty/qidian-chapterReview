@@ -2,7 +2,7 @@ const got = require("got");
 const fs = require("fs");
 
 const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
-  const path = `./output/${bookId}`;
+  const path = `../output/${bookId}`;
   fs.access(path, (err) => {
     if (err) {
       fs.mkdir(path, { recursive: true }, (err) => {

@@ -1,5 +1,5 @@
 const got = require("got");
-const books = require("./config.json").books;
+const books = require("../config.json").books;
 const { ProcessChapterReview } = require("./utils");
 const csrfToken = "4H73EIrxxJaMWelkAN0MWZaU3SHGWkefJQQzlHWS";
 
