@@ -23,11 +23,23 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Checkout branch
+        run: |
+          git fetch
+          git checkout master
+
+      - name: Clone
+        run: git clone https://github.com/${{github.repository}}.git
+
       - name: Install NPM dependencies
-        run: npm install 
+        run: | 
+          cd qidian-chapterReview
+          npm install 
 
       - name: Run
-        run: node index.js
+        run: | 
+          cd qidian-chapterReview
+          node index
 
       - name: Commit files
         env:
@@ -42,7 +54,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: master
 
       - name: Telegram push
         env:
