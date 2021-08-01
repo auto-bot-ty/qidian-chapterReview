@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "got": "^11.8.2",
-    "last-commit-log": "^3.1.1",
-    "messaging-api-telegram": "^1.0.4"
-  }
-}
