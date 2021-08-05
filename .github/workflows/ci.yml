@@ -41,7 +41,7 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           git config --local user.email "github-actions@noreply.github.com"
-          git config --local user.name "github-actions"
+          git config --local user.name "ci"
           git add .
           git commit -m "Update `date "+%Y/%m/%d %H:%M"`" -a
 
