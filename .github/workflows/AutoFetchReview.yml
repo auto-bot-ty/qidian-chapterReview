@@ -1,4 +1,4 @@
-name: 本章说 ·
+name: AutoFetchReview
 
 on:
   schedule:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Checkout branch
         run: |
-          git fetch
+          git fetch origin master
           git checkout master
 
       - name: Clone
@@ -42,7 +42,7 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           git config --local user.email "github-actions@noreply.github.com"
-          git config --local user.name "github-actions"
+          git config --local user.name "AutoFetchReview"
           git add .
           git commit -m "Update `date "+%Y/%m/%d %H:%M"`" -a
 
