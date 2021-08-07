@@ -1,4 +1,4 @@
-name: CI
+name: Test
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Checkout branch
         run: |
-          git fetch
+          git fetch origin ci
           git checkout ci
 
       - name: Clone
@@ -41,7 +41,7 @@ jobs:
           TZ: Asia/Shanghai
         run: |
           git config --local user.email "github-actions@noreply.github.com"
-          git config --local user.name "ci"
+          git config --local user.name "Test"
           git add .
           git commit -m "Update `date "+%Y/%m/%d %H:%M"`" -a
 
