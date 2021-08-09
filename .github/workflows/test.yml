@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id # 自己点的 start
 
     steps:
       - uses: actions/checkout@v2
@@ -18,7 +17,7 @@ jobs:
         with:
           node-version: 15.x
 
-      - name: Checkout branch
+      - name: Switch branch
         run: |
           git fetch origin ci
           git checkout ci
