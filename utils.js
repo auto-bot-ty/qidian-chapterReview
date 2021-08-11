@@ -25,13 +25,11 @@ const ProcessChapterReview = async (bookId, chapterId, cN, csrfToken) => {
       const response = await got.get(chapterReviewUrl);
       try {
         const list = JSON.parse(response.body).data.list;
-        let reviewList = list.map(
+        const content = list.map(
           (item) => `>--- ${item.content.trim()}<br>\n`
         );
-        reviewList.unshift(
-          `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`
-        );
-        return reviewList;
+        const quoteContent = [`\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`];
+        return [...quoteContent, ...content];
       } catch (err) {
         const msg = `[error] invalid list (${item.segmentId})\n---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`;
         console.log(msg);
