@@ -1,4 +1,4 @@
-name:Automatic Fetch Reviews
+name: Automatic Fetch Reviews
 
 on:
   schedule:
