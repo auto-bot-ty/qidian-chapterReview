@@ -3,7 +3,7 @@ name: Test
 on:
   push:
     branches:
-    - dev
+      - dev
 
 jobs:
   build:
@@ -22,16 +22,25 @@ jobs:
           git fetch origin ci
           git checkout ci
 
-      - name: Clone
-        run: git clone https://github.com/${{github.repository}}.git
+      - name: Clone Public Repo
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        if: ${{ !env.ACCESS_TOKEN }}
+        run: git clone https:github.com/${{github.repository}}.git
+
+      - name: Clone Private Repo
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        if: ${{ env.ACCESS_TOKEN }}
+        run: git clone https://oauth2:${{ secrets.ACCESS_TOKEN }}@github.com/${{github.repository}}.git
 
       - name: Install NPM dependencies
-        run: | 
+        run: |
           cd qidian-chapterReview
-          npm install 
+          npm install
 
       - name: Run
-        run: | 
+        run: |
           cd qidian-chapterReview
           node index
 
@@ -54,5 +63,7 @@ jobs:
         env:
           TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        if : ${{ env.TELEGRAM_TO != '' && env.TELEGRAM_TOKEN != '' }}
-        run: node push.js ${{ github.event_name }}
+        if: ${{ env.TELEGRAM_TO != '' && env.TELEGRAM_TOKEN != '' }}
+        run: |
+          cd qidian-chapterReview
+          node push.js ${{ github.event_name }}
