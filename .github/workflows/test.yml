@@ -26,7 +26,7 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         if: ${{ !env.ACCESS_TOKEN }}
-        run: git clone https:github.com/${{github.repository}}.git
+        run: git clone https://github.com/${{github.repository}}.git
 
       - name: Clone Private Repo
         env:
