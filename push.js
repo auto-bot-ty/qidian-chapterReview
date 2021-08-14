@@ -10,7 +10,7 @@ const telegramPush = () => {
   const commit = lcl.getLastCommitSync();
   const client = new TelegramClient({ accessToken });
   // https://yoctol.github.io/messaging-apis/latest/classes/messaging_api_telegram.telegramclient-1.html#sendmessage
-  const message = `本章说更新！---${eventName} \n${commit.gitUrl}/commit/${commit.hash} \n小说网站 \nhttps://www.biquge5200.cc/125_125197`;
+  const message = `本章说更新！---${eventName} \n${commit.gitUrl}/commit/master \n小说网站 \nhttps://book.qidian.com/info/1029553244/#Catalog`;
 
   client
     .sendMessage(chatId, message, {
