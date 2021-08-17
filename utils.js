@@ -53,7 +53,7 @@ const getReviewSummary = async (chapterId) => {
 }
 
 const mkdirBookDir = () => {
-  path = `../output/${bookId}`;
+  path = `./output/${bookId}`;
   fs.access(path, (err) => {
     if (err) {
       fs.mkdir(path, { recursive: true }, (err) => {

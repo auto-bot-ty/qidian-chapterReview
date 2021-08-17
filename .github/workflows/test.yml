@@ -34,15 +34,14 @@ jobs:
         if: ${{ env.ACCESS_TOKEN }}
         run: git clone https://oauth2:${{ secrets.ACCESS_TOKEN }}@github.com/${{github.repository}}.git
 
+      - name: Copy
+        run: cp -rf $PWD/qidian-chapterReview/* $PWD
+
       - name: Install NPM dependencies
-        run: |
-          cd qidian-chapterReview
-          npm install
+        run: npm install
 
       - name: Run
-        run: |
-          cd qidian-chapterReview
-          node index
+        run: node index
 
       - name: Commit files
         env:
@@ -64,6 +63,4 @@ jobs:
           TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         if: ${{ env.TELEGRAM_TO != '' && env.TELEGRAM_TOKEN != '' }}
-        run: |
-          cd qidian-chapterReview
-          node push.js ${{ github.event_name }}
+        run: node push.js ${{ github.event_name }}
