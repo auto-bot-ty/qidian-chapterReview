@@ -1,1 +1,5 @@
-qidian-chapterReview/
+*
+!output
+!output/*
+!output/*/
+!output/*/*
