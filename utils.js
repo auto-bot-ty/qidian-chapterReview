@@ -1,8 +1,8 @@
 const fs = require("fs");
 const got = require("got");
-const csrfToken = "4H73EIrxxJaMWelkAN0MWZaU3SHGWkefJQQzlHWS";
-let bookId;
 let path;
+let bookId;
+let csrfToken;
 
 const ProcessChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
@@ -13,10 +13,10 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
       const response = await got.get(chapterReviewUrl);
       try {
         const list = JSON.parse(response.body).data.list;
-        const content = list.map(
-          (item) => `>--- ${item.content.trim()}<br>\n`
-        );
-        const quoteContent = [`\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`];
+        const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
+        const quoteContent = [
+          `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
+        ];
         return [...quoteContent, ...content];
       } catch (err) {
         const msg = `[error] invalid list (${item.segmentId})\n---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`;
@@ -26,11 +26,12 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
     })
   );
   writeFile(out, chapterName);
-}
+};
 
 const getNewList = async (bid, start) => {
   bookId = bid;
   mkdirBookDir();
+  csrfToken = await getCsrfToken(bookId);
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const response = await got.get(categoryUrl);
   const data = JSON.parse(response.body).data;
@@ -39,18 +40,26 @@ const getNewList = async (bid, start) => {
   console.log(`${bookName}\n================================`);
   const list = vs[vs.length - 1].cs;
   start = start > list.length ? list.length : start;
-  console.log(`抓取最新 ${start} 章`)
+  console.log(`抓取最新 ${start} 章`);
   const newList = list.slice(-start);
   return newList;
-}
+};
 
 const getReviewSummary = async (chapterId) => {
   const reviewSummaryUrl = `https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}`;
   const response = await got.get(reviewSummaryUrl);
   const reviewSummary = JSON.parse(response.body).data.list;
-  reviewSummary.sort((a, b) => (a.segmentId - b.segmentId));
+  reviewSummary.sort((a, b) => a.segmentId - b.segmentId);
   return reviewSummary;
-}
+};
+
+const getCsrfToken = async (bookId) => {
+  const response = await got.get(`https://m.qidian.com/book/${bookId}/catalog`);
+  const _csrfToken = response.headers["set-cookie"]
+    .join("")
+    .match(/_csrfToken=(\S*);/)[1];
+  return _csrfToken;
+};
 
 const mkdirBookDir = () => {
   path = `./output/${bookId}`;
@@ -61,7 +70,7 @@ const mkdirBookDir = () => {
       });
     }
   });
-}
+};
 
 const writeFile = (out, chapterName) => {
   fs.writeFile(
@@ -69,10 +78,12 @@ const writeFile = (out, chapterName) => {
     out.join("").replace(/,/g, ""),
     { flag: "w" },
     (err) => {
-      console.log(err ? `${chapterName} 写入失败！` : `${chapterName} 写入成功！`);
+      console.log(
+        err ? `${chapterName} 写入失败！` : `${chapterName} 写入成功！`
+      );
     }
   );
-}
+};
 
 module.exports = {
   ProcessChapterReview,
