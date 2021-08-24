@@ -31,7 +31,7 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
 const getNewList = async (bid, start) => {
   bookId = bid;
   mkdirBookDir();
-  csrfToken = await getCsrfToken(bookId);
+  csrfToken = await getCsrfToken();
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const response = await got.get(categoryUrl);
   const data = JSON.parse(response.body).data;
@@ -53,7 +53,7 @@ const getReviewSummary = async (chapterId) => {
   return reviewSummary;
 };
 
-const getCsrfToken = async (bookId) => {
+const getCsrfToken = async () => {
   const response = await got.get(`https://m.qidian.com/book/${bookId}/catalog`);
   const _csrfToken = response.headers["set-cookie"]
     .join("")
