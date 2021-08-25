@@ -8,16 +8,20 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
   const out = await Promise.all(
     reviewSummary.map(async (item) => {
-      const pageSize = item.reviewNum > 98 ? "98" : item.reviewNum;
+      const pageSize = item.reviewNum > 98 ? 98 : item.reviewNum;
       const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${pageSize}`;
       const response = await got.get(chapterReviewUrl);
       try {
         const list = JSON.parse(response.body).data.list;
-        const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
-        const quoteContent = [
-          `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
-        ];
-        return [...quoteContent, ...content];
+        if (list.length > 0) {
+          const content = list.map(
+            (item) => `>--- ${item.content.trim()}<br>\n`
+          );
+          const quoteContent = [
+            `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
+          ];
+          return [...quoteContent, ...content];
+        }
       } catch (err) {
         const msg = `[error] invalid list (${item.segmentId})\n---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`;
         console.log(msg);
