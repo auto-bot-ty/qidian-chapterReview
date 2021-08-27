@@ -1,15 +1,20 @@
 name: Automatic Fetch Reviews
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "00 3,12,22 * * *"
-  watch:
-    types: [started]
+
+env:
+  TZ: Asia/Shanghai
+  GITHUB_BRANCH: master
+  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+  TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id # 自己点的 start
 
     steps:
       - uses: actions/checkout@v2
@@ -21,18 +26,13 @@ jobs:
 
       - name: Switch branch
         run: |
-          git fetch origin master
-          git checkout master
-
+          git fetch origin ${{ env.GITHUB_BRANCH }}
+          git checkout ${{ env.GITHUB_BRANCH }}
       - name: Clone Public Repo
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         if: ${{ !env.ACCESS_TOKEN }}
         run: git clone https://github.com/${{github.repository}}.git
 
       - name: Clone Private Repo
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         if: ${{ env.ACCESS_TOKEN }}
         run: git clone https://oauth2:${{ secrets.ACCESS_TOKEN }}@github.com/${{github.repository}}.git
 
@@ -46,23 +46,17 @@ jobs:
         run: node index
 
       - name: Commit files
-        env:
-          TZ: Asia/Shanghai
         run: |
           git config --local user.email "github-actions@noreply.github.com"
           git config --local user.name "AutoFetchReview"
           git add .
-          git commit -m "Update `date "+%Y/%m/%d %H:%M"`" -a
-
+          git commit -m "Update `date "+%Y/%m/%d %H:%M"`" --no-verify
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+          branch: ${{ env.GITHUB_BRANCH }}
 
       - name: Telegram push
-        env:
-          TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         if: ${{ env.TELEGRAM_TO != '' && env.TELEGRAM_TOKEN != '' }}
         run: node push.js ${{ github.event_name }}
