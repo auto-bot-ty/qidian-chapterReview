@@ -8,8 +8,8 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
   const out = await Promise.all(
     reviewSummary.map(async (item) => {
-      const pageSize = item.reviewNum > 98 ? 98 : item.reviewNum;
-      const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${pageSize}`;
+      // const pageSize = item.reviewNum > 98 ? 98 : item.reviewNum;
+      const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${item.reviewNum}`;
       const response = await got(chapterReviewUrl);
       const list = JSON.parse(response.body).data.list;
       try {
