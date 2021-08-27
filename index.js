@@ -1,5 +1,5 @@
 const got = require("got");
-const books = require("./config.json").books;
+const { books } = require("./config.json");
 const { ProcessChapterReview, getNewList } = require("./utils");
 
 (async () => {
