@@ -49,8 +49,13 @@ jobs:
         run: |
           git config --local user.email "github-actions@noreply.github.com"
           git config --local user.name "AutoFetchReview"
+          if [ -n "$(git status -s)" ];then
           git add .
-          git commit -m "Update `date "+%Y/%m/%d %H:%M"`" --no-verify
+          git commit -m "Update `date "+%Y/%m/%d %H:%M"`"
+          else
+          echo "There is no merge commits."
+          fi
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
