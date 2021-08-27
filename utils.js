@@ -51,7 +51,7 @@ const getReviewSummary = async (chapterId) => {
     (res) => JSON.parse(res.body).data.list
   );
   reviewSummary.sort((a, b) => a.segmentId - b.segmentId);
-  return reviewSummary.filter((e) => (e.reviewNum = 0));
+  return reviewSummary.filter((e) => e.reviewNum !== 0);
 };
 
 const getCsrfToken = async () => {
