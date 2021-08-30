@@ -5,13 +5,11 @@ on:
   push:
     branches:
       - dev
+  #schedule:
+  #- cron: "00 3,12,22 * * *"
 
 env:
-  TZ: Asia/Shanghai
   GITHUB_BRANCH: ci
-  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-  TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
-  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
 
 jobs:
   build:
@@ -29,16 +27,19 @@ jobs:
         run: |
           git fetch origin ${{ env.GITHUB_BRANCH }}
           git checkout ${{ env.GITHUB_BRANCH }}
-      - name: Clone Public Repo
-        if: ${{ !env.ACCESS_TOKEN }}
-        run: git clone https://github.com/${{github.repository}}.git
 
-      - name: Clone Private Repo
-        if: ${{ env.ACCESS_TOKEN }}
-        run: git clone https://oauth2:${{ secrets.ACCESS_TOKEN }}@github.com/${{github.repository}}.git
+      - name: Clone repo
+        run: |
+          if [ -n "${{ secrets.ACCESS_TOKEN }}" ];then
+          echo "Clone private repo"
+          git clone https://oauth2:${{ secrets.ACCESS_TOKEN }}@github.com/${{github.repository}}.git
+          else
+          echo "Clone public repo"
+          git clone https://github.com/${{github.repository}}.git
+          fi
 
       - name: Copy
-        run: cp -rf $PWD/qidian-chapterReview/* $PWD
+        run: cp -rf $PWD/$(basename $PWD)/* $PWD
 
       - name: Install NPM dependencies
         run: npm install
@@ -47,12 +48,15 @@ jobs:
         run: node index
 
       - name: Commit files
+        env:
+          TZ: Asia/Shanghai
         run: |
           git config --local user.email "github-actions@noreply.github.com"
-          git config --local user.name "Test"
+          git config --local user.name "github-actions"
+
           if [ -n "$(git status -s)" ];then
           git add .
-          git commit -m "Update `date "+%Y/%m/%d %H:%M"`"
+          git commit -m "Update $(date "+%Y/%m/%d %H:%M")"
           else
           echo "There is no merge commits."
           fi
@@ -64,5 +68,8 @@ jobs:
           branch: ${{ env.GITHUB_BRANCH }}
 
       - name: Telegram push
+        env:
+          TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         if: ${{ env.TELEGRAM_TO != '' && env.TELEGRAM_TOKEN != '' }}
         run: node push.js ${{ github.event_name }}
