@@ -9,7 +9,7 @@ on:
   #- cron: "00 3,12,22 * * *"
 
 env:
-  GITHUB_BRANCH: ci
+  GITHUB_BRANCH: test
 
 jobs:
   build:
