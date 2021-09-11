@@ -67,9 +67,19 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ env.DOWNSTREAM_BRANCH }}
 
-      - name: Telegram push
-        env:
-          TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        if: ${{ env.TELEGRAM_TO != '' && env.TELEGRAM_TOKEN != '' }}
-        run: node push.js ${{ github.event_name }}
+      - name: Get latest Git commit hash
+        run: |
+          echo "COMMIT_HASH=$(git rev-parse HEAD)" >> ${GITHUB_ENV}
+
+
+      - name: Send notify to telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
+          message: |
+            本章说更新！---${{ github.event_name }}
+            [View it On Github](${{ github.server_url }}/${{ github.repository }}/commit/${{env.COMMIT_HASH}})
+            小说网站
+            https://book.qidian.com/info/1029553244/#Catalog
