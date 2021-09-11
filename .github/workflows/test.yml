@@ -68,11 +68,13 @@ jobs:
           branch: ${{ env.DOWNSTREAM_BRANCH }}
 
       - name: Get latest Git commit hash
+        if: ${{ env.TELEGRAM_TO && env.TELEGRAM_TOKEN}}
         run: |
           echo "COMMIT_HASH=$(git rev-parse HEAD)" >> ${GITHUB_ENV}
 
 
       - name: Send notify to telegram
+        if: ${{ env.TELEGRAM_TO && env.TELEGRAM_TOKEN}}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
