@@ -68,10 +68,8 @@ jobs:
           branch: ${{ env.DOWNSTREAM_BRANCH }}
 
       - name: Get latest Git commit hash
-        if: ${{ env.TELEGRAM_TO && env.TELEGRAM_TOKEN}}
         run: |
           echo "COMMIT_HASH=$(git rev-parse HEAD)" >> ${GITHUB_ENV}
-
 
       - name: Send notify to telegram
         if: ${{ env.TELEGRAM_TO && env.TELEGRAM_TOKEN}}
@@ -85,3 +83,6 @@ jobs:
             [View it On Github](${{ github.server_url }}/${{ github.repository }}/commit/${{env.COMMIT_HASH}})
             小说网站
             https://book.qidian.com/info/1029553244/#Catalog
+        env:
+          TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
