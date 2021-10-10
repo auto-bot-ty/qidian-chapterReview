@@ -1,23 +1,23 @@
 {
   "books": [
     {
-      "bookName": "三国请回答！崩坏的三国演义",
-      "bookId": "1028755947",
+      "book_name": "三国请回答！崩坏的三国演义",
+      "book_id": "1028755947",
       "start": 3
     },
     {
-      "bookName": "这个人仙太过正经",
-      "bookId": "1021635590",
+      "book_name": "这个人仙太过正经",
+      "book_id": "1021635590",
       "start": 3
     },
     {
-      "bookName": "我的治愈系游戏 ",
-      "bookId": "1025901449",
+      "book_name": "我的治愈系游戏 ",
+      "book_id": "1025901449",
       "start": 3
     },
     {
-      "bookName": "虚拟尽头",
-      "bookId": "1029553244",
+      "book_name": "虚拟尽头",
+      "book_id": "1029553244",
       "drift": "true",
       "start": 0
     }
