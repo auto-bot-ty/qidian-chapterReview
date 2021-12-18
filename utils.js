@@ -12,7 +12,7 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
       const pageSize = item.reviewNum;
       const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${item.pageSize}`;
       const response = await got(chapterReviewUrl);
-      const list = JSON.parse(response.body).data.list;
+      const { list } = JSON.parse(response.body).data;
       try {
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
@@ -33,7 +33,7 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
 const getNewList = async (bid, start) => {
   bookId = bid;
   mkdirBookDir();
-  csrfToken = await getCsrfToken();
+  csrfToken = await fetchCsrfToken();
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const data = await got(categoryUrl).then((res) => JSON.parse(res.body).data);
   const bookName = data.bookName;
@@ -55,7 +55,7 @@ const getReviewSummary = async (chapterId) => {
   return reviewSummary.filter((e) => e.reviewNum !== 0);
 };
 
-const getCsrfToken = async () => {
+const fetchCsrfToken = async () => {
   const response = await got(`https://m.qidian.com/book/${bookId}/catalog`);
   const _csrfToken = response.headers["set-cookie"]
     .join("")
