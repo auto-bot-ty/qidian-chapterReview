@@ -27,17 +27,20 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
       }
     })
   );
+  createBookDir();
   writeFile(out, chapterName);
 };
 
 const getNewList = async (bid, start) => {
-  bookId = bid;
-  mkdirBookDir();
-  csrfToken = await fetchCsrfToken();
+  await assignmentGlobalariables(bid);
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const data = await got(categoryUrl).then((res) => JSON.parse(res.body).data);
-  const bookName = data.bookName;
-  console.log(`\n${bookName}\n================================`);
+  const { bookName } = data;
+  console.log(
+    `\n${bookName}  (${
+      process.env.DOWNSTREAM_BRANCH || "local"
+    }/${bookId}) \n================================`
+  );
   let list = [];
   data.vs.forEach((e) => (list = [...list, ...e.cs]));
   start = start > list.length ? list.length : start;
@@ -55,6 +58,12 @@ const getReviewSummary = async (chapterId) => {
   return reviewSummary.filter((e) => e.reviewNum !== 0);
 };
 
+const assignmentGlobalariables = async (bid) => {
+  bookId = bid;
+  csrfToken = await fetchCsrfToken();
+  path = `./output/${bookId}`;
+};
+
 const fetchCsrfToken = async () => {
   const response = await got(`https://m.qidian.com/book/${bookId}/catalog`);
   const _csrfToken = response.headers["set-cookie"]
@@ -63,8 +72,7 @@ const fetchCsrfToken = async () => {
   return _csrfToken;
 };
 
-const mkdirBookDir = () => {
-  path = `./output/${bookId}`;
+const createBookDir = () => {
   fs.access(path, (err) => {
     if (err) {
       fs.mkdir(path, { recursive: true }, (err) => {
