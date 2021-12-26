@@ -1,4 +1,3 @@
-const got = require("got");
 const { books } = require("./config.json");
 const { ProcessChapterReview, getNewList } = require("./utils");
 
