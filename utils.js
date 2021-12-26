@@ -32,13 +32,12 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
 };
 
 const getNewList = async (bid, start) => {
-  await assignmentGlobalariables(bid);
+  await assignmentGlobalVariables(bid);
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const data = await got(categoryUrl).then((res) => JSON.parse(res.body).data);
   const { bookName } = data;
   console.log(
-    `\n${bookName}  (${
-      process.env.DOWNSTREAM_BRANCH || "local"
+    `\n${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
   let list = [];
@@ -58,7 +57,7 @@ const getReviewSummary = async (chapterId) => {
   return reviewSummary.filter((e) => e.reviewNum !== 0);
 };
 
-const assignmentGlobalariables = async (bid) => {
+const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
   csrfToken = await fetchCsrfToken();
   path = `./output/${bookId}`;
