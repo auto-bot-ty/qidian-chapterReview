@@ -43,6 +43,11 @@ const getNewList = async (bid, start) => {
   let list = [];
   data.vs.forEach((e) => (list = [...list, ...e.cs]));
   start = start > list.length ? list.length : start;
+  const githubActionsLimit = 10;
+  if (process.env.DOWNSTREAM_BRANCH && start > githubActionsLimit) {
+    start = githubActionsLimit;
+    console.log(`触发 demo 限制，重置 start 为 ${start}`);
+  }
   console.log(`抓取最新 ${start} 章`);
   const newList = list.slice(-start);
   return newList;
