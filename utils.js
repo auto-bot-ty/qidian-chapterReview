@@ -1,5 +1,6 @@
 const fs = require("fs");
 const got = require("got");
+const { logger, errorLogger } = require("./logs/logger");
 let path;
 let bookId;
 let csrfToken;
@@ -20,9 +21,8 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
         ];
         return [...quoteContent, ...content];
       } catch (err) {
-        const msg = `---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`;
-        console.log(err);
-        console.log(msg);
+        const msg = `---bookId: ${bookId} chapterName: ${chapterName}\n---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`;
+        errorLogger.info(`${err} \n ${msg}`);
         return `\n[${item.segmentId}] invalid list\n`;
       }
     })
@@ -36,8 +36,9 @@ const getNewList = async (bid, start) => {
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const data = await got(categoryUrl).then((res) => JSON.parse(res.body).data);
   const { bookName } = data;
-  console.log(
-    `\n${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
+  logger.info(
+    `${bookName}  (${
+      process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
   let list = [];
@@ -46,9 +47,9 @@ const getNewList = async (bid, start) => {
   const githubActionsLimit = 10;
   if (process.env.GITHUB_REPOSITORY && start > githubActionsLimit) {
     start = githubActionsLimit;
-    console.log(`触发 demo 限制，重置 start 为 ${start}`);
+    logger.info(`触发 demo 限制，重置 start 为 ${start}`);
   }
-  console.log(`抓取最新 ${start} 章`);
+  logger.info(`抓取最新 ${start} 章`);
   const newList = list.slice(-start);
   return newList;
 };
@@ -92,7 +93,7 @@ const writeFile = (out, chapterName) => {
     out.join("").replace(/,/g, ""),
     { flag: "w" },
     (err) => {
-      console.log(
+      logger.info(
         err ? `${chapterName} 写入失败！` : `${chapterName} 写入成功！`
       );
     }
