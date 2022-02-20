@@ -1,4 +1,4 @@
-const { books } = require("./config.json");
+const { books } = require("../config.json");
 const { ProcessChapterReview, getNewList } = require("./utils");
 
 (async () => {

@@ -1,6 +1,6 @@
 const fs = require("fs");
 const got = require("./utils/got");
-const { logger, errorLogger } = require("./logs/logger");
+const { logger, errorLogger } = require("./utils/logger");
 let path;
 let bookId;
 let csrfToken;
@@ -66,7 +66,7 @@ const getReviewSummary = async (chapterId) => {
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
   csrfToken = await fetchCsrfToken();
-  path = `./output/${bookId}`;
+  path = `../output/${bookId}`;
 };
 
 const fetchCsrfToken = async () => {

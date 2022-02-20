@@ -1,4 +1,4 @@
-const { errorLogger } = require("../logs/logger");
+const { errorLogger } = require("./logger");
 const got = require('got');
 
 const custom = got.extend({

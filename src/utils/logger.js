@@ -7,16 +7,16 @@ log4js.configure({
     console: { type: "console" },
     file: {
       type: "file",
-      filename: "logs/out/output.log",
+      filename: "../logs/out/output.log",
     },
     dayfile: {
       type: "dateFile",
-      filename: "logs/output.log",
+      filename: "../logs/output.log",
       pattern: ".yyyyMMdd",
     },
     error: {
       type: "file",
-      filename: "logs/error.log",
+      filename: "../logs/error.log",
     },
   },
   categories: {
