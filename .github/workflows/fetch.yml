@@ -43,7 +43,7 @@ jobs:
         run: npm install
 
       - name: Run
-        run: node index
+        run: cd src && node index
 
       - name: Set git identity
         run: |
