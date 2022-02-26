@@ -31,7 +31,7 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
   writeFile(out, chapterName);
 };
 
-const getNewList = async (bid, start) => {
+const getCatalog = async (bid, start, lock) => {
   await assignmentGlobalVariables(bid);
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const { data } = await got(categoryUrl).then((res) => res.data);
@@ -41,17 +41,24 @@ const getNewList = async (bid, start) => {
       process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
-  let list = [];
-  data.vs.forEach((e) => (list = [...list, ...e.cs]));
-  start = start > list.length ? list.length : start;
+  return getSlicesCatalog(data, start, lock);
+};
+
+const getSlicesCatalog = (data, start, lock) => {
+  let catalogList = [];
+  data.vs.forEach((e) => (catalogList = [...catalogList, ...e.cs]));
+  if (lock) {
+    logger.info("仅抓取付费章！");
+    catalogList = catalogList.filter((e) => e.sS !== 1);
+  }
+  start = start > catalogList.length ? catalogList.length : start;
   const githubActionsLimit = 10;
   if (process.env.GITHUB_REPOSITORY && start > githubActionsLimit) {
     start = githubActionsLimit;
     logger.info(`触发 demo 限制，重置 start 为 ${start}`);
   }
   logger.info(`抓取最新 ${start} 章`);
-  const newList = list.slice(-start);
-  return newList;
+  return catalogList.slice(-start);
 };
 
 const getReviewSummary = async (chapterId) => {
@@ -91,12 +98,14 @@ const writeFile = (out, chapterName) => {
     out.join("").replace(/,/g, ""),
     { flag: "w" },
     (err) => {
-      err ? errorLogger.info(`${chapterName} 写入失败！\n ${err}`) : logger.info(`${chapterName} 写入成功！`)
+      err
+        ? errorLogger.info(`${chapterName} 写入失败！\n ${err}`)
+        : logger.info(`${chapterName} 写入成功！`);
     }
   );
 };
 
 module.exports = {
   ProcessChapterReview,
-  getNewList,
+  getCatalog,
 };
