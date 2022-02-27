@@ -1,5 +1,6 @@
-const fs = require("fs");
 const got = require("./utils/got");
+const { prefixPath } = require("./utils/config").value;
+const { createBookDir, writeFile } = require("./utils/fs");
 const { logger, errorLogger } = require("./utils/logger");
 let path;
 let bookId;
@@ -27,8 +28,7 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
       }
     })
   );
-  createBookDir();
-  writeFile(out, chapterName);
+  writeFile(path, out, chapterName);
 };
 
 const getCatalog = async (bid, start, lock) => {
@@ -41,6 +41,7 @@ const getCatalog = async (bid, start, lock) => {
       process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
+  createBookDir(path);
   return getSlicesCatalog(data, start, lock);
 };
 
@@ -73,35 +74,12 @@ const getReviewSummary = async (chapterId) => {
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
   csrfToken = await fetchCsrfToken();
-  path = `../output/${bookId}`;
+  path = `${prefixPath}${bookId}`;
 };
 
 const fetchCsrfToken = async () => {
   return await got(`https://m.qidian.com/book/${bookId}/catalog`).then(
     (res) => res.headers["set-cookie"].join("").match(/_csrfToken=(\S*);/)[1]
-  );
-};
-
-const createBookDir = () => {
-  fs.access(path, (err) => {
-    if (err) {
-      fs.mkdir(path, { recursive: true }, (err) => {
-        if (err) throw err;
-      });
-    }
-  });
-};
-
-const writeFile = (out, chapterName) => {
-  fs.writeFile(
-    `${path}/${chapterName}.md`,
-    out.join("").replace(/,/g, ""),
-    { flag: "w" },
-    (err) => {
-      err
-        ? errorLogger.info(`${chapterName} 写入失败！\n ${err}`)
-        : logger.info(`${chapterName} 写入成功！`);
-    }
   );
 };
 
