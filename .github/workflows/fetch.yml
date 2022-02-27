@@ -10,6 +10,7 @@ on:
 
 env:
   DOWNSTREAM_BRANCH: master
+  TZ: Asia/Shanghai
 
 jobs:
   build:
@@ -51,8 +52,6 @@ jobs:
           git config --global user.name "github-actions"
 
       - name: Commit files
-        env:
-          TZ: Asia/Shanghai
         run: |
           if [ -n "$(git status -s)" ];then
           git add .
