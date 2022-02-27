@@ -1,8 +1,9 @@
 const { errorLogger } = require("./logger");
+const config = require('./config').value;
 const got = require('got');
 
 const custom = got.extend({
-    retry: 2,
+    retry: config.requestRetry,
     hooks: {
         beforeRetry: [
             (options, err, count) => {
@@ -30,9 +31,9 @@ const custom = got.extend({
         ],
     },
     headers: {
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+        'user-agent': config.ua,
     },
-    timeout: 30000,
+    timeout: config.requestTimeout,
 });
 custom.all = (list) => Promise.all(list);
 
