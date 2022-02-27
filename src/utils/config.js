@@ -4,4 +4,8 @@ const value = {
   requestTimeout: 30000,
 };
 
-module.exports = value;
+module.exports = {
+  get value() {
+    return value;
+  },
+};
