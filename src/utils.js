@@ -12,8 +12,20 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
     reviewSummary.map(async (item) => {
       //const pageSize = item.reviewNum > 100 ? 100 : item.reviewNum;
       const pageSize = item.reviewNum;
-      const chapterReviewUrl = `https://vipreader.qidian.com/ajax/chapterReview/reviewList?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}&segmentId=${item.segmentId}&type=2&page=1&pageSize=${item.pageSize}`;
-      const response = await got(chapterReviewUrl);
+      const chapterReviewUrl =
+        "https://vipreader.qidian.com/ajax/chapterReview/reviewList";
+      const paramsList = {
+        bookId,
+        page: 1,
+        type: 2,
+        chapterId,
+        _csrfToken: csrfToken,
+        pageSize: item.pageSize,
+        segmentId: item.segmentId,
+      };
+      const response = await got(chapterReviewUrl, {
+        searchParams: new URLSearchParams(paramsList),
+      });
       const { list } = response.data.data;
       try {
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
