@@ -1,5 +1,20 @@
 const fs = require("fs");
+const path = require('path');
+const yaml = require('js-yaml');
 const { logger, errorLogger } = require("./logger");
+
+
+const yamltojson = () => {
+  try {
+    const filePath = path.resolve(__dirname, '../../config.yaml');
+    const data = yaml.load(fs.readFileSync(filePath, 'utf8'));
+    return data;
+  } catch (error) {
+    errorLogger.error(error);
+    return null;
+  }
+}
+
 
 const createBookDir = (path) => {
   fs.access(path, (err) => {
@@ -27,4 +42,7 @@ const writeFile = (path, out, chapterName) => {
 module.exports = {
   createBookDir,
   writeFile,
+  get json() {
+    return yamltojson();
+  }
 };

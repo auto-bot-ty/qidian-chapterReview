@@ -6,7 +6,7 @@ let path;
 let bookId;
 let csrfToken;
 
-const ProcessChapterReview = async (chapterId, chapterName) => {
+const processChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
   const out = await Promise.all(
     reviewSummary.map(async (item) => {
@@ -43,34 +43,35 @@ const ProcessChapterReview = async (chapterId, chapterName) => {
   writeFile(path, out, chapterName);
 };
 
-const getCatalog = async (bid, start, lock) => {
+const getCatalog = async (bid, start, total, lock) => {
   await assignmentGlobalVariables(bid);
   const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
   const { data } = await got(categoryUrl).then((res) => res.data);
   const { bookName } = data;
   logger.info(
-    `${bookName}  (${
-      process.env.DOWNSTREAM_BRANCH || "local"
+    `${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
   createBookDir(path);
-  return getSlicesCatalog(data, start, lock);
+  return getSlicesCatalog(data, start, total, lock);
 };
 
-const getSlicesCatalog = (data, start, lock) => {
+const getSlicesCatalog = (data, start, total, lock) => {
   let catalogList = [];
   data.vs.forEach((e) => (catalogList = [...catalogList, ...e.cs]));
   if (lock) {
     logger.info("仅抓取付费章！");
     catalogList = catalogList.filter((e) => e.sS !== 1);
   }
-  start = start > catalogList.length ? catalogList.length : start;
+  if (total || start > catalogList.length) {
+    start = catalogList.length;
+  }
   const githubActionsLimit = 10;
   if (process.env.GITHUB_REPOSITORY && start > githubActionsLimit) {
     start = githubActionsLimit;
     logger.info(`触发 demo 限制，重置 start 为 ${start}`);
   }
-  logger.info(`抓取最新 ${start} 章`);
+  logger.info(`抓取${start === catalogList.length ? '全部，共' : '最新'} ${start} 章`);
   return catalogList.slice(-start);
 };
 
@@ -96,6 +97,6 @@ const fetchCsrfToken = async () => {
 };
 
 module.exports = {
-  ProcessChapterReview,
+  processChapterReview,
   getCatalog,
 };
