@@ -18,10 +18,9 @@ books:
 
   - book_name: 洪荒历
     book_id: '1011940368'
-
     '#start': 10
-  - book_name: 五百个郭靖
 
+  - book_name: 五百个郭靖
     book_id: '1030653673'
     start: 0
 
