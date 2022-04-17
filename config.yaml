@@ -3,29 +3,46 @@ lock: 0
 books:
   - book_name: 三国请回答！崩坏的三国演义
     book_id: '1028755947'
+    start: 0
+    
   - book_name: 我的治愈系游戏
     book_id: '1025901449'
+
   - book_name: 我只想安静的做个苟道中人
     book_id: '1026694115'
+
   - book_name: 舌尖上的霍格沃茨
     book_id: '1013293257'
+
   - book_name: 呢喃诗章
     book_id: '1027630529'
+
   - book_name: 洪荒历
     book_id: '1011940368'
     '#start': 10
+
   - book_name: 五百个郭靖
     book_id: '1030653673'
     start: 0
+
   - book_name: 十方武圣
     book_id: '1024088056'
     start: 0
+
   - book_name: 这个人仙太过正经
     book_id: '1021635590'
     start: 0
+
   - book_name: 我的一天有48小时
     book_id: '1013009467'
     start: 0
+
   - book_name: 虚拟尽头
     book_id: '1029553244'
     start: 0
+  
+  - book_name: 我的女友来自未来
+    book_id: '1025656512'
+
+  - book_name: 道诡异仙
+    book_id: '1031794030'
