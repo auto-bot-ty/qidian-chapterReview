@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - dev
+    paths:
+      - '!**.yml'
   #schedule:
   #- cron: "00 3,12,22 * * *"
 
