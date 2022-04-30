@@ -1,5 +1,5 @@
 const got = require("./utils/got");
-const { prefixPath } = require("./utils/config").value;
+const { prefixPath, githubRepository} = require("./utils/config").value;
 const { createBookDir, writeFile, filePathisExist } = require("./utils/fs");
 const { logger, errorLogger } = require("./utils/logger");
 let path;
@@ -68,7 +68,7 @@ const getSlicesCatalog = (data, start, total, lock) => {
     start = catalogList.length;
   }
   const githubActionsLimit = 10;
-  if (process.env.GITHUB_REPOSITORY && start > githubActionsLimit) {
+  if (process.env.GITHUB_REPOSITORY !== githubRepository && start > githubActionsLimit) {
     start = githubActionsLimit;
     logger.info(`触发 demo 限制，重置 start 为 ${start}`);
   }

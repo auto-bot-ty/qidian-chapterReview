@@ -3,6 +3,7 @@ const value = {
   requestRetry: 2,
   requestTimeout: 30000,
   prefixPath: "../output/",
+  githubRepository: "auto-bot-ty/qidian-chapterReview",
 };
 
 module.exports = {
