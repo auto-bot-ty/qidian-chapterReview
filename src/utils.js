@@ -1,6 +1,6 @@
 const got = require("./utils/got");
 const { prefixPath } = require("./utils/config").value;
-const { createBookDir, writeFile } = require("./utils/fs");
+const { createBookDir, writeFile, filePathisExist } = require("./utils/fs");
 const { logger, errorLogger } = require("./utils/logger");
 let path;
 let bookId;
@@ -52,6 +52,7 @@ const getCatalog = async (bid, start, total, lock) => {
     `${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
+  if (!(await filePathisExist(path))) total = 1;
   createBookDir(path);
   return getSlicesCatalog(data, start, total, lock);
 };

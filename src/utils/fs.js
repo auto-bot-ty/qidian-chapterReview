@@ -26,6 +26,15 @@ const createBookDir = (path) => {
   });
 };
 
+
+const filePathisExist= async(filePath) => {
+  return new Promise((resolve) => {
+    fs.access(filePath, fs.constants.F_OK, (err) => {
+      return resolve(err ? false : true)
+    })
+  })
+}
+
 const writeFile = (path, out, chapterName) => {
   fs.writeFile(
     `${path}/${chapterName}.md`,
@@ -42,6 +51,7 @@ const writeFile = (path, out, chapterName) => {
 module.exports = {
   createBookDir,
   writeFile,
+  filePathisExist,
   get json() {
     return yamltojson();
   }
