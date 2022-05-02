@@ -1,7 +1,9 @@
 const log4js = require("log4js");
 const logger = log4js.getLogger();
 const errorLogger = log4js.getLogger("error");
-const { logsPath } = require("./utils/config").value;
+//TODO: 引入绝对路径
+const { logsPath } = require("./config").value;
+
 
 log4js.configure({
   appenders: {
