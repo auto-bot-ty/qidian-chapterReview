@@ -13,6 +13,7 @@ on:
 env:
   DOWNSTREAM_BRANCH: test
   OUTPUT_PATH: ../../output/
+  LOGS_PATH: ../../logs
   TZ: Asia/Shanghai
 
 jobs:
