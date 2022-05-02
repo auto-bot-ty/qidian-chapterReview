@@ -45,7 +45,7 @@ jobs:
         run: cd $PWD/$(basename $PWD) && npm install
 
       - name: Run
-        run: cd cd $PWD/$(basename $PWD)/src && node index
+        run: cd $PWD/$(basename $PWD)/src && node index
 
       - name: Set git identity
         run: |
