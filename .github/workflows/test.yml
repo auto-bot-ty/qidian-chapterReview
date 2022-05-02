@@ -12,6 +12,7 @@ on:
 
 env:
   DOWNSTREAM_BRANCH: test
+  OUTPUT_PATH: ../../output/
   TZ: Asia/Shanghai
 
 jobs:
@@ -39,14 +40,12 @@ jobs:
           git clone https://github.com/${{github.repository}}.git
           fi
 
-      - name: Copy
-        run: cp -rf $PWD/$(basename $PWD)/* $PWD
 
       - name: Install NPM dependencies
-        run: npm install
+        run: cd $PWD/$(basename $PWD) && npm install
 
       - name: Run
-        run: cd src && node index
+        run: cd cd $PWD/$(basename $PWD)/src && node index
 
       - name: Set git identity
         run: |
