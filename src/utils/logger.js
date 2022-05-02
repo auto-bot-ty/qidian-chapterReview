@@ -1,22 +1,23 @@
 const log4js = require("log4js");
 const logger = log4js.getLogger();
 const errorLogger = log4js.getLogger("error");
+const { logsPath } = require("./utils/config").value;
 
 log4js.configure({
   appenders: {
     console: { type: "console" },
     file: {
       type: "file",
-      filename: "../logs/out/output.log",
+      filename: `${logsPath}/out/output.log`,
     },
     dayfile: {
       type: "dateFile",
-      filename: "../logs/output.log",
+      filename: `${logsPath}/output.log`,
       pattern: ".yyyyMMdd",
     },
     error: {
       type: "file",
-      filename: "../logs/error.log",
+      filename: `${logsPath}/error.log`,
     },
   },
   categories: {

@@ -5,6 +5,7 @@ let value = {
   requestRetry: 2,
   requestTimeout: 30000,
   prefixPath: envs.OUTPUT_PATH || "../output/",
+  logsPath: envs.LOGS_PATH || "../logs",
   githubRepository: "auto-bot-ty/qidian-chapterReview",
 };
 
