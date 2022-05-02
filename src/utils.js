@@ -1,7 +1,7 @@
-const got = require("./utils/got");
-const { prefixPath, githubRepository} = require("./utils/config").value;
-const { createBookDir, writeFile, filePathisExist } = require("./utils/fs");
-const { logger, errorLogger } = require("./utils/logger");
+const got = require("@/utils/got");
+const { prefixPath, githubRepository} = require("@/utils/config").value;
+const { createBookDir, writeFile, filePathisExist } = require("@/utils/fs");
+const { logger, errorLogger } = require("@/utils/logger");
 let path;
 let bookId;
 let csrfToken;

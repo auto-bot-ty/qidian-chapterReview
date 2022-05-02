@@ -1,5 +1,5 @@
-const { errorLogger } = require("./logger");
-const config = require("./config").value;
+const { errorLogger } = require("@/utils/logger");
+const config = require("@/utils/config").value;
 const got = require("got");
 
 const custom = got.extend({

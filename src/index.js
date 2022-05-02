@@ -1,5 +1,6 @@
-const { books, start, lock } = require("./utils/fs").json;
-const { processChapterReview, getCatalog } = require("./utils");
+require("module-alias/register");
+const { books, start, lock } = require("@/utils/fs").json;
+const { processChapterReview, getCatalog } = require("@/utils");
 
 (async () => {
   for (const item of books) {

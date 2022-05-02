@@ -37,6 +37,7 @@
     "messaging-api-common": "^1.0.4",
     "messaging-api-telegram": "^1.0.4",
     "mimic-response": "^1.0.1",
+    "module-alias": "^2.2.2",
     "ms": "^2.1.2",
     "no-case": "^3.0.4",
     "normalize-url": "^4.5.1",
@@ -67,5 +68,8 @@
   "bugs": {
     "url": "https://github.com/auto-bot-ty/qidian-chapterReview/issues"
   },
-  "homepage": "https://github.com/auto-bot-ty/qidian-chapterReview#readme"
+  "homepage": "https://github.com/auto-bot-ty/qidian-chapterReview#readme",
+  "_moduleAliases": {
+    "@": "./src"
+  }
 }

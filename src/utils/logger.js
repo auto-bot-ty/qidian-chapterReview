@@ -1,8 +1,7 @@
 const log4js = require("log4js");
 const logger = log4js.getLogger();
 const errorLogger = log4js.getLogger("error");
-//TODO: 引入绝对路径
-const { logsPath } = require("./config").value;
+const { logsPath } = require("@/utils/config").value;
 
 
 log4js.configure({
