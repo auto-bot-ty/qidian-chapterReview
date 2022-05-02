@@ -9,7 +9,7 @@ on:
     - cron: "00 3,12,22 * * *"
 
 env:
-  DOWNSTREAM_BRANCH: test
+  DOWNSTREAM_BRANCH: master
   OUTPUT_PATH: ../../output/
   LOGS_PATH: ../../logs
   TZ: Asia/Shanghai
