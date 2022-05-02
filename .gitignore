@@ -1,12 +1,1 @@
-*
-!logs
-!logs/*.log
-!logs/out
-!logs/out/*.log
-!output
-!output/*
-!output/*/
-!output/*/*
-!output/*/*/*
-!output/*/*/*/
-!output/*/*/*/*
+qidian-chapterReview
