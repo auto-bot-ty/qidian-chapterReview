@@ -1,22 +1,22 @@
 const fs = require("fs");
-const path = require('path');
-const yaml = require('js-yaml');
+const path = require("path");
+const yaml = require("js-yaml");
+const git = require('git-rev-sync');
+const { prefixPath } = require("@/utils/config").value;
 const { logger, errorLogger } = require("@/utils/logger");
-
 
 const yamltojson = () => {
   try {
-    const filePath = path.resolve(__dirname, '../../config.yaml');
-    const data = yaml.load(fs.readFileSync(filePath, 'utf8'));
+    const filePath = path.resolve(__dirname, "../../config.yaml");
+    const data = yaml.load(fs.readFileSync(filePath, "utf8"));
     return data;
   } catch (error) {
     errorLogger.error(error);
     return null;
   }
-}
+};
 
-
-const createBookDir = (path) => {
+const createBookDir = async(path) => {
   fs.access(path, (err) => {
     if (err) {
       fs.mkdir(path, { recursive: true }, (err) => {
@@ -26,33 +26,51 @@ const createBookDir = (path) => {
   });
 };
 
-
-const filePathisExist= async(filePath) => {
+const filePathisExist = async (filePath) => {
   return new Promise((resolve) => {
     fs.access(filePath, fs.constants.F_OK, (err) => {
-      return resolve(err ? false : true)
-    })
-  })
-}
+      return resolve(err ? false : true);
+    });
+  });
+};
 
-const writeFile = (path, out, chapterName) => {
+const writeFile = async(path, out, name) => {
   fs.writeFile(
-    `${path}/${chapterName}.md`,
+    `${path}/${name}.md`,
     out.join("").replace(/,/g, ""),
     { flag: "w" },
     (err) => {
       err
-        ? errorLogger.info(`${chapterName} 写入失败！\n ${err}`)
-        : logger.info(`${chapterName} 写入成功！`);
+        ? errorLogger.info(`${name} 写入失败！\n ${err}`)
+        : logger.info(`${name} 写入成功！`);
     }
   );
+};
+
+const generateCategory = async() => {
+  const outputPath = path.resolve(__dirname, `../${prefixPath}`);
+  const categoryPath = path.resolve(__dirname, "../../../docs/category");
+  const outputDir = fs.readdirSync(outputPath);
+  for (const bookid of outputDir) {
+    const bookidDir = fs.readdirSync(`${outputPath}/${bookid}`);
+    const out = bookidDir.map((i, e) => {
+      const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
+      return `[${i}](${url})<br>\n`;
+    });
+    const result = await filePathisExist(categoryPath);
+    if(!result) {
+      await createBookDir(categoryPath);
+    }
+    await writeFile(categoryPath, out, bookid);
+  }
 };
 
 module.exports = {
   createBookDir,
   writeFile,
   filePathisExist,
+  generateCategory,
   get json() {
     return yamltojson();
-  }
+  },
 };

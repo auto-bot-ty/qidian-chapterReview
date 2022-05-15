@@ -1,7 +1,7 @@
 require("module-alias/register");
 const { books, start, lock } = require("@/utils/fs").json;
 const { processChapterReview, getCatalog } = require("@/utils");
-
+const { generateCategory } = require("@/utils/fs");
 (async () => {
   for (const item of books) {
     item.start ?? (item.start = start);
@@ -12,4 +12,5 @@ const { processChapterReview, getCatalog } = require("@/utils");
       await processChapterReview(chapter.id, chapter.cN);
     }
   }
+  await generateCategory();
 })();
