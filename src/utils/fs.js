@@ -52,16 +52,19 @@ const generateCategory = async() => {
   const categoryPath = path.resolve(__dirname, "../../../docs/category");
   const outputDir = fs.readdirSync(outputPath);
   for (const bookid of outputDir) {
-    const bookidDir = fs.readdirSync(`${outputPath}/${bookid}`);
-    const out = bookidDir.map((i, e) => {
-      const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
-      return `[${i}](${url})<br>\n`;
-    });
-    const result = await filePathisExist(categoryPath);
-    if(!result) {
-      await createBookDir(categoryPath);
-    }
-    await writeFile(categoryPath, out, bookid);
+    if (bookid !== '1016150754') {
+      const bookidDir = fs.readdirSync(`${outputPath}/${bookid}`);
+      bookidDir.sort((a, b) => b.match(/\[(.*)\]|(-)/)[1] - a.match(/\[(.*)\]|(-)/)[1]);
+      const out = bookidDir.map((i, e) => {
+        const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
+        return `[${i}](${url})<br>\n`;
+      });
+      const result = await filePathisExist(categoryPath);
+      if(!result) {
+        await createBookDir(categoryPath);
+      }
+      await writeFile(categoryPath, out, bookid);
+    }   
   }
 };
 
