@@ -10,3 +10,4 @@
  Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/docs/category/1011094405.md'
 [2022-05-16T00:00:59.986] [INFO] error - 1011940368 写入失败！
  Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/docs/category/1011940368.md'
+[2022-06-19T20:33:50.814] [INFO] error - Request https://m.qidian.com/book/1025901449/catalog/ fail, retry attempt #1: RequestError: read ECONNRESET
