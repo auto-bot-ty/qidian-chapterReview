@@ -1,6 +1,5 @@
 start: 3
 lock: 0
-
 books:
   - book_name: 三国请回答！崩坏的三国演义
     book_id: '1028755947'
@@ -48,5 +47,9 @@ books:
   - book_name: 道诡异仙
     book_id: '1031794030'
 
+  - book_name: 无限血核
+    book_id: '1013607299'
+
   - book_name: 星门
     book_id: '1027669580'
+    start: 0
