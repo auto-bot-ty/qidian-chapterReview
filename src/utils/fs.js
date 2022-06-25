@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const yaml = require("js-yaml");
 const git = require('git-rev-sync');
-const { prefixPath } = require("@/utils/config").value;
+const { outputPaths, categoryPaths } = require("@/utils/config").value;
 const { logger, errorLogger } = require("@/utils/logger");
 
 const yamltojson = () => {
@@ -16,7 +16,7 @@ const yamltojson = () => {
   }
 };
 
-const createBookDir = async(path) => {
+const createBookDir = async (path) => {
   fs.access(path, (err) => {
     if (err) {
       fs.mkdir(path, { recursive: true }, (err) => {
@@ -34,7 +34,7 @@ const filePathisExist = async (filePath) => {
   });
 };
 
-const writeFile = async(path, out, name) => {
+const writeFile = async (path, out, name) => {
   fs.writeFile(
     `${path}/${name}.md`,
     out.join("").replace(/,/g, ""),
@@ -47,9 +47,9 @@ const writeFile = async(path, out, name) => {
   );
 };
 
-const generateCategory = async() => {
-  const outputPath = path.resolve(__dirname, `../${prefixPath}`);
-  const categoryPath = path.resolve(__dirname, "../../../docs/category");
+const generateCategory = async () => {
+  const outputPath = path.resolve(__dirname, `../${outputPaths}`);
+  const categoryPath = path.resolve(__dirname, `../../${categoryPaths}`);
   const outputDir = fs.readdirSync(outputPath);
   for (const bookid of outputDir) {
     if (bookid !== '1016150754') {
@@ -60,11 +60,11 @@ const generateCategory = async() => {
         return `[${i}](${url})<br>\n`;
       });
       const result = await filePathisExist(categoryPath);
-      if(!result) {
+      if (!result) {
         await createBookDir(categoryPath);
       }
       await writeFile(categoryPath, out, bookid);
-    }   
+    }
   }
 };
 

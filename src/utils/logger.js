@@ -1,7 +1,9 @@
+const path = require("path");
 const log4js = require("log4js");
 const logger = log4js.getLogger();
 const errorLogger = log4js.getLogger("error");
-const { logsPath } = require("@/utils/config").value;
+const { logsPaths } = require("@/utils/config").value;
+const logsPath = path.resolve(__dirname, `../../${logsPaths}`);
 
 
 log4js.configure({

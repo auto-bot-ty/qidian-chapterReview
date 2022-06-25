@@ -1,5 +1,5 @@
 const got = require("@/utils/got");
-const { prefixPath, githubRepository} = require("@/utils/config").value;
+const { outputPaths, githubRepository } = require("@/utils/config").value;
 const { createBookDir, writeFile, filePathisExist } = require("@/utils/fs");
 const { logger, errorLogger } = require("@/utils/logger");
 let path;
@@ -88,9 +88,9 @@ const getReviewSummary = async (chapterId) => {
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
   csrfToken = await fetchCsrfToken();
-  path = `${prefixPath}${bookId}`;
+  path = `${outputPaths}/${bookId}`;
 };
-
+// 获取 csrfToken
 const fetchCsrfToken = async () => {
   return await got(`https://m.qidian.com/book/${bookId}/catalog`).then(
     (res) => res.headers["set-cookie"].join("").match(/_csrfToken=(\S*);/)[1]
