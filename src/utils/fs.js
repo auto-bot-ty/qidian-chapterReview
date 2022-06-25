@@ -52,24 +52,22 @@ const generateCategory = async () => {
   const categoryPath = path.resolve(__dirname, `../../${categoryPaths}`);
   const outputDir = fs.readdirSync(outputPath);
   for (const bookid of outputDir) {
-    if (bookid !== '1016150754') {
-      const bookidDir = fs.readdirSync(`${outputPath}/${bookid}`);
-      try {
-        bookidDir.sort((a, b) => b.match(/\[(.*)\]|(-)/)[1] - a.match(/\[(.*)\]|(-)/)[1]);
-      } catch (error) {
-        const msg = `---bookid: ${bookid}`
-        errorLogger.error(msg + error);
-      }
-      const out = bookidDir.map((i, e) => {
-        const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
-        return `[${i}](${url})<br>\n`;
-      });
-      const result = await filePathisExist(categoryPath);
-      if (!result) {
-        await createBookDir(categoryPath);
-      }
-      await writeFile(categoryPath, out, bookid);
+    const bookidDir = fs.readdirSync(`${outputPath}/${bookid}`);
+    try {
+      bookidDir.sort((a, b) => b.match(/\[(.*)\]|(-)/)[1] - a.match(/\[(.*)\]|(-)/)[1]);
+    } catch (error) {
+      const msg = `---bookid: ${outputPath}/${bookid}`;
+      errorLogger.error(msg + error);
     }
+    const out = bookidDir.map((i, e) => {
+      const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
+      return `[${i}](${url})<br>\n`;
+    });
+    const result = await filePathisExist(categoryPath);
+    if (!result) {
+      await createBookDir(categoryPath);
+    }
+    await writeFile(categoryPath, out, bookid);
   }
 };
 
