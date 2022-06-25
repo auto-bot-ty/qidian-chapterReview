@@ -12,7 +12,7 @@ env:
   DOWNSTREAM_BRANCH: master
   OUTPUT_PATH: ../../output
   LOGS_PATH: ../logs
-  CATEGORY_PATH：../docs/category
+  CATEGORY_PATH: ../docs/category
   TZ: Asia/Shanghai
 
 jobs:
