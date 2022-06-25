@@ -58,7 +58,7 @@ const generateCategory = async () => {
         bookidDir.sort((a, b) => b.match(/\[(.*)\]|(-)/)[1] - a.match(/\[(.*)\]|(-)/)[1]);
       } catch (error) {
         const msg = `---bookid: ${bookid}`
-        errorLogger.errorm(msg + error);
+        errorLogger.error(msg + error);
       }
       const out = bookidDir.map((i, e) => {
         const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
