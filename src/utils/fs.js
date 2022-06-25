@@ -54,7 +54,12 @@ const generateCategory = async () => {
   for (const bookid of outputDir) {
     if (bookid !== '1016150754') {
       const bookidDir = fs.readdirSync(`${outputPath}/${bookid}`);
-      bookidDir.sort((a, b) => b.match(/\[(.*)\]|(-)/)[1] - a.match(/\[(.*)\]|(-)/)[1]);
+      try {
+        bookidDir.sort((a, b) => b.match(/\[(.*)\]|(-)/)[1] - a.match(/\[(.*)\]|(-)/)[1]);
+      } catch (error) {
+        const msg = `---bookid: ${bookid}`
+        errorLogger.errorm(msg + error);
+      }
       const out = bookidDir.map((i, e) => {
         const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
         return `[${i}](${url})<br>\n`;
