@@ -12,7 +12,7 @@ on:
 
 env:
   DOWNSTREAM_BRANCH: test
-  OUTPUT_PATH: ../../output
+  OUTPUT_PATH: ../output
   LOGS_PATH: ../logs
   CATEGORY_PATH: ../docs/category
   TZ: Asia/Shanghai

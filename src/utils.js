@@ -1,3 +1,4 @@
+const Path = require("path");
 const got = require("@/utils/got");
 const { outputPaths, githubRepository } = require("@/utils/config").value;
 const { createBookDir, writeFile, filePathisExist } = require("@/utils/fs");
@@ -88,7 +89,7 @@ const getReviewSummary = async (chapterId) => {
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
   csrfToken = await fetchCsrfToken();
-  path = `${outputPaths}/${bookId}`;
+  path = Path.resolve(__dirname, `../${outputPaths}/${bookId}`);
 };
 // 获取 csrfToken
 const fetchCsrfToken = async () => {

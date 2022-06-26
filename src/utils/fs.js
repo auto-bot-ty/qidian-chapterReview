@@ -48,7 +48,7 @@ const writeFile = async (path, out, name) => {
 };
 
 const generateCategory = async () => {
-  const outputPath = path.resolve(__dirname, `../${outputPaths}`);
+  const outputPath = path.resolve(__dirname, `../../${outputPaths}`);
   const categoryPath = path.resolve(__dirname, `../../${categoryPaths}`);
   const outputDir = fs.readdirSync(outputPath);
   for (const bookid of outputDir) {
