@@ -22,3 +22,4 @@
 [2022-06-24T06:22:17.324] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=E2pV3Pxegsz5fbxtTaN38TO7TpjsGerSyvL0Csk1&bookId=1026694115&chapterId=718490053 fail, retry attempt #2: RequestError: socket hang up
 [2022-06-25T11:53:08.954] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=cUC0DZ883GWxAuWs7egHXQDpGYnq58DCy6ROPiuB&bookId=1025656512&chapterId=718364333 fail, retry attempt #1: RequestError: read ECONNRESET
 [2022-06-26T06:17:19.363] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-06-26T09:31:00.691] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
