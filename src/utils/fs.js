@@ -16,15 +16,6 @@ const yamltojson = () => {
   }
 };
 
-const createBookDir = async (path) => {
-  fs.access(path, (err) => {
-    if (err) {
-      fs.mkdir(path, { recursive: true }, (err) => {
-        if (err) throw err;
-      });
-    }
-  });
-};
 
 const filePathisExist = async (filePath) => {
   return new Promise((resolve) => {
@@ -34,7 +25,15 @@ const filePathisExist = async (filePath) => {
   });
 };
 
+//写入文件,判断路径是否存在，不存在则创建
 const writeFile = async (path, out, name) => {
+  fs.access(path, (err) => {
+    if (err) {
+      fs.mkdir(path, { recursive: true }, (err) => {
+        if (err) throw err;
+      });
+    }
+  });
   fs.writeFile(
     `${path}/${name}.md`,
     out.join("").replace(/,/g, ""),
@@ -64,16 +63,11 @@ const generateCategory = async () => {
       const url = `${git.remoteUrl().split(".git")[0]}/blob/${gitBranch}/output/${bookid}/${encodeURI(i)}`;
       return `[${i}](${url})<br>\n`;
     });
-    const result = await filePathisExist(categoryPath);
-    if (!result) {
-      await createBookDir(categoryPath);
-    }
     await writeFile(categoryPath, out, bookid);
   }
 };
 
 module.exports = {
-  createBookDir,
   writeFile,
   filePathisExist,
   generateCategory,

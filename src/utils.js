@@ -1,7 +1,7 @@
 const Path = require("path");
 const got = require("@/utils/got");
 const { outputPaths, githubRepository } = require("@/utils/config").value;
-const { createBookDir, writeFile, filePathisExist } = require("@/utils/fs");
+const { writeFile, filePathisExist } = require("@/utils/fs");
 const { logger, errorLogger } = require("@/utils/logger");
 let path;
 let bookId;
@@ -54,7 +54,6 @@ const getCatalog = async (bid, start, total, lock) => {
     }/${bookId}) \n================================`
   );
   if (!(await filePathisExist(path))) total = 1;
-  createBookDir(path);
   return getSlicesCatalog(data, start, total, lock);
 };
 
