@@ -48,9 +48,7 @@ const writeFile = async (path, out, name) => {
 };
 
 const generateCategory = async () => {
-  if (gitBranch) {
-    return;
-  }
+  if (!gitBranch) return;
   const outputPath = path.resolve(__dirname, `../../${outputPaths}`);
   const categoryPath = path.resolve(__dirname, `../../${categoryPaths}`);
   const outputDir = fs.readdirSync(outputPath);
