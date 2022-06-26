@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const yaml = require("js-yaml");
 const git = require('git-rev-sync');
-const { outputPaths, categoryPaths } = require("@/utils/config").value;
+const { outputPaths, categoryPaths, gitBranch } = require("@/utils/config").value;
 const { logger, errorLogger } = require("@/utils/logger");
 
 const yamltojson = () => {
@@ -48,6 +48,9 @@ const writeFile = async (path, out, name) => {
 };
 
 const generateCategory = async () => {
+  if (gitBranch) {
+    return;
+  }
   const outputPath = path.resolve(__dirname, `../../${outputPaths}`);
   const categoryPath = path.resolve(__dirname, `../../${categoryPaths}`);
   const outputDir = fs.readdirSync(outputPath);
@@ -60,7 +63,7 @@ const generateCategory = async () => {
       errorLogger.error(msg + error);
     }
     const out = bookidDir.map((i, e) => {
-      const url = `${git.remoteUrl().split(".git")[0]}/blob/master/output/${bookid}/${encodeURI(i)}`;
+      const url = `${git.remoteUrl().split(".git")[0]}/blob/${gitBranch}/output/${bookid}/${encodeURI(i)}`;
       return `[${i}](${url})<br>\n`;
     });
     const result = await filePathisExist(categoryPath);

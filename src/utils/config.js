@@ -8,6 +8,7 @@ let value = {
   logsPaths: envs.LOGS_PATH || "logs",
   categoryPaths: envs.CATEGORY_PATH || "docs/category",
   githubRepository: "auto-bot-ty/qidian-chapterReview",
+  gitBranch: envs.DOWNSTREAM_BRANCH
 };
 
 module.exports = {
