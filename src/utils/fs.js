@@ -81,7 +81,7 @@ const updateReadme = async () => {
   if (!data) return;
   const out = data.books.map((i) => {
     const url = `${git.remoteUrl().split(".git")[0]}/tree/${gitBranch}/docs/category/${i.book_id}.md`;
-    return `| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "√" : "×"} |  |  |`;
+    return `| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "√" : "√"} |  |  |`;
   }).join("\n");
   const readmePath = path.resolve(__dirname, "../../../README.md");
   fs.writeFile(readmePath, template + "\n" + out, { flag: "w" }, (err) => {
