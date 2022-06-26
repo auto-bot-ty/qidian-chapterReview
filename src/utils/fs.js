@@ -64,9 +64,34 @@ const generateCategory = async () => {
       return `[${i}](${url})<br>\n`;
     });
     await writeFile(categoryPath, out, bookid);
+    await updateReadme();
   }
 };
 
+
+const template = `# 起点本章说
+[![Automatic Fetch Reviews](https://github.com/auto-bot-ty/qidian-chapterReview/actions/workflows/fetch.yml/badge.svg?branch=dev)](https://github.com/auto-bot-ty/qidian-chapterReview/actions/workflows/fetch.yml)
+
+---- 
+| 书名 | 目录 | 是否更新 | 最后爬取时间 | 网址 |
+| --- | --- | --- | --- | --- |`;
+//update README.md
+const updateReadme = async () => {
+  const data = yamltojson();
+  if (!data) return;
+  const out = data.books.map((i) => {
+    const url = `${git.remoteUrl().split(".git")[0]}/tree/${gitBranch}/docs/category/${i.book_id}.md`;
+    console.log(url);
+    return `| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "√" : "×"} |  |  |`;
+  }).join("\n");
+  const readmePath = path.resolve(__dirname, "../../../README.md");
+  fs.writeFile(readmePath, template + "\n" + out, { flag: "w" }, (err) => {
+    err
+      ? errorLogger.info(`README.md 写入失败！\n ${err}`)
+      : logger.info(`README.md 写入成功！`);
+  }
+  );
+}
 module.exports = {
   writeFile,
   filePathisExist,
