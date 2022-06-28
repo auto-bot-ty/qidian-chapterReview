@@ -32,3 +32,4 @@
 [2022-06-27T20:36:48.412] [INFO] error - Request https://m.qidian.com/majax/book/category?_csrfToken=Xiv2MzqllRf6U3ifpQQOEjQoHQX1G1dq3KzhfRt1&bookId=1026694115 fail, retry attempt #1: TimeoutError: Timeout awaiting 'request' for 30000ms
 [2022-06-27T20:41:21.468] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2022-06-28T06:17:22.356] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-06-28T12:02:06.993] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
