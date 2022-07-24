@@ -185,3 +185,5 @@
 [2022-07-24T11:53:35.225] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=A3ahpbTZwpQcPdrWnVR3xi41PJsh41ASsgXKNzOp&bookId=1027630529&chapterId=722278024 fail, retry attempt #1: RequestError: read ECONNRESET
 [2022-07-24T11:54:15.385] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2022-07-24T20:26:41.562] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-07-25T06:14:11.880] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=Ww4im2ehZC3PuvkYwglzGRABqjYO3UokH5gBklLh&bookId=1011940368&chapterId=722201392 fail, retry attempt #1: RequestError: read ECONNRESET
+[2022-07-25T06:14:58.502] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
