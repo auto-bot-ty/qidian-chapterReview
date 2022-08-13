@@ -21,7 +21,7 @@ const processChapterReview = async (chapterId, chapterName) => {
         type: 2,
         chapterId,
         _csrfToken: csrfToken,
-        pageSize: item.pageSize,
+        pageSize,
         segmentId: item.segmentId,
       };
       const response = await got(chapterReviewUrl, {
