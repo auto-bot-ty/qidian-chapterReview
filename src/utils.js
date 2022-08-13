@@ -6,10 +6,10 @@ const { logger, errorLogger } = require("@/utils/logger");
 let path;
 let bookId;
 let csrfToken;
+let flag;
 
 const processChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
-  const flag = '';
   const out = await Promise.all(
     reviewSummary.map(async (item) => {
       //const pageSize = item.reviewNum > 100 ? 100 : item.reviewNum;
