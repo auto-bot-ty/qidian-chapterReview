@@ -27,8 +27,8 @@ const processChapterReview = async (chapterId, chapterName) => {
       const response = await got(chapterReviewUrl, {
         searchParams: new URLSearchParams(paramsList),
       });
-      const { list } = response.data.data;
       try {
+        const { list } = response.data.data;
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
           `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
