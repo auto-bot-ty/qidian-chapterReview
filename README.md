@@ -5,7 +5,7 @@
 | 书名 | 目录 | 是否更新 | 最后爬取时间 | 网址 |
 | --- | --- | --- | --- | --- |
 | 三国请回答！崩坏的三国演义 | [1028755947](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1028755947.md) | × |  |  |
-| 我的治愈系游戏 | [1025901449](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1025901449.md) | √ |  |  |
+| 我的治愈系游戏 | [1025901449](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1025901449.md) | × |  |  |
 | 我只想安静的做个苟道中人 | [1026694115](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1026694115.md) | √ |  |  |
 | 舌尖上的霍格沃茨 | [1013293257](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1013293257.md) | √ |  |  |
 | 呢喃诗章 | [1027630529](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1027630529.md) | √ |  |  |
