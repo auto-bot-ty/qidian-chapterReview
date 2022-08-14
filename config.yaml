@@ -1,4 +1,4 @@
-start: 3
+start: 0
 lock: 0
 books:
   - book_name: 三国请回答！崩坏的三国演义
@@ -11,7 +11,8 @@ books:
 
   - book_name: 我只想安静的做个苟道中人
     book_id: '1026694115'
-
+    start: 5
+ 
   - book_name: 舌尖上的霍格沃茨
     book_id: '1013293257'
 
