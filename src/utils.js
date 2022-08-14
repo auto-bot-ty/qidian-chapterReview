@@ -6,7 +6,6 @@ const { logger, errorLogger } = require("@/utils/logger");
 let path;
 let bookId;
 let csrfToken;
-let flag;
 
 const processChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
@@ -25,18 +24,14 @@ const processChapterReview = async (chapterId, chapterName) => {
         pageSize,
         segmentId: item.segmentId,
       };
-      if (flag === bookId ) {
-        return `\n[${item.segmentId}] invalid list\n`;
-      }
       const response = await got(chapterReviewUrl, {
         searchParams: new URLSearchParams(paramsList),
       });
       if(typeof(response.data.data) == "undefined") {
-          flag = bookId
-          return `\n[${item.segmentId}] invalid list\n`;
+        console.log(response.data);
       }
+      const { list } = response.data.data;
       try {
-        const { list } = response.data.data;
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
           `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
