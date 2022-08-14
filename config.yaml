@@ -7,6 +7,7 @@ books:
     
   - book_name: 我的治愈系游戏
     book_id: '1025901449'
+    start: 0
 
   - book_name: 我只想安静的做个苟道中人
     book_id: '1026694115'
