@@ -95,7 +95,9 @@ const getReviewSummary = async (chapterId) => {
 
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
-  csrfToken = await fetchCsrfToken();
+  if(typeof(csrfToken) == "undefined"){
+    csrfToken = await fetchCsrfToken();
+  }
   path = Path.resolve(__dirname, `../${outputPaths}/${bookId}`);
 };
 // 获取 csrfToken
