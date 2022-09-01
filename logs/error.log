@@ -25,3 +25,7 @@
 [2022-09-01T22:26:19.038] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
 [2022-09-01T22:26:19.670] [INFO] error - [612] 第274节：藤冬郎的药丸 写入失败！
  Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[612] 第274节：藤冬郎的药丸.md'
+[2022-09-01T22:29:59.476] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-09-01T22:30:01.108] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
+[2022-09-01T22:30:01.656] [INFO] error - [612] 第274节：藤冬郎的药丸 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[612] 第274节：藤冬郎的药丸.md'
