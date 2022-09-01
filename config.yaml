@@ -11,11 +11,11 @@ books:
 
   - book_name: 道诡异仙 (正常)
     book_id: '1031794030'
-    start: 1
+    start: 0
 
   - book_name: 无限血核 (正常)
     book_id: '1013607299'
-    start: 0
+    start: 1
 
   - book_name: 呢喃诗章 (标记)
     book_id: '1027630529'
