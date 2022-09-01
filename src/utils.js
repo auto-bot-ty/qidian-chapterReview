@@ -56,7 +56,7 @@ const getCatalog = async (bid, start, total, lock) => {
     `${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
-  if (!(await filePathisExist(path))) total = 1;
+  // if (!(await filePathisExist(path))) total = 1;
   return getSlicesCatalog(data, start, total, lock);
 };
 
