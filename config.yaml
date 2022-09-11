@@ -1,23 +1,23 @@
 start: 0
 lock: 0
 books:
-  - book_name: 舌尖上的霍格沃茨 (正常)
+  - book_name: 舌尖上的霍格沃茨
     book_id: '1013293257'
     start: 3
 
-  - book_name: 洪荒历 (正常)
+  - book_name: 洪荒历
     book_id: '1011940368'
     start: 3
 
-  - book_name: 我只想安静的做个苟道中人 (正常)
+  - book_name: 我只想安静的做个苟道中人
     book_id: '1026694115'
     start: 3
 
-  - book_name: 无限血核 (正常)
+  - book_name: 无限血核
     book_id: '1013607299'
     start: 3
 
-  - book_name: 呢喃诗章 (标记)
+  - book_name: 呢喃诗章
     book_id: '1027630529'
     start: 3
 
