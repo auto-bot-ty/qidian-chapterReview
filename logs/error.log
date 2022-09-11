@@ -41,3 +41,9 @@
  Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[621] 第282节：巨大优势.md'
 [2022-09-11T11:09:42.990] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2022-09-11T11:09:44.909] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
+[2022-09-11T11:16:51.445] [INFO] error - [1898] 第六十九章：似仙非仙。（四合一大章！求订阅！！！） 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1026694115/[1898] 第六十九章：似仙非仙。（四合一大章！求订阅！！！）.md'
+[2022-09-11T11:16:56.387] [INFO] error - [619] 第278节：近身激战 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[619] 第278节：近身激战.md'
+[2022-09-11T11:17:07.175] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-09-11T11:17:09.995] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
