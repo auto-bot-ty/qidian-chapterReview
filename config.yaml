@@ -4,13 +4,14 @@ books:
   - book_name: 舌尖上的霍格沃茨 (正常)
     book_id: '1013293257'
     start: 1
- 
+
   - book_name: 洪荒历 (正常)
     book_id: '1011940368'
     start: 1
 
-  - book_name: 道诡异仙 (正常)
-    book_id: '1031794030'
+  - book_name: 我只想安静的做个苟道中人 (正常)
+    book_id: '1026694115'
+    start: 1
 
   - book_name: 无限血核 (正常)
     book_id: '1013607299'
@@ -18,10 +19,10 @@ books:
 
   - book_name: 呢喃诗章 (标记)
     book_id: '1027630529'
-
-  - book_name: 我只想安静的做个苟道中人 (标记)
-    book_id: '1026694115'
     start: 1
+
+  - book_name: 道诡异仙 (标记)
+    book_id: '1031794030'
 
   - book_name: 三国请回答！崩坏的三国演义 (标记)
     book_id: '1028755947'
