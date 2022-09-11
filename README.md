@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | 舌尖上的霍格沃茨 (正常) | [1013293257](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1013293257.md) | √ |  |  |
 | 洪荒历 (正常) | [1011940368](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1011940368.md) | √ |  |  |
-| 道诡异仙 (正常) | [1031794030](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1031794030.md) | × |  |  |
+| 道诡异仙 (正常) | [1031794030](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1031794030.md) | √ |  |  |
 | 无限血核 (正常) | [1013607299](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1013607299.md) | √ |  |  |
 | 呢喃诗章 (标记) | [1027630529](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1027630529.md) | √ |  |  |
 | 我只想安静的做个苟道中人 (标记) | [1026694115](https://github.com/auto-bot-ty/qidian-chapterReview/tree/test/docs/category/1026694115.md) | √ |  |  |
