@@ -35,3 +35,9 @@
 [2022-09-11T11:04:05.868] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
 [2022-09-11T11:04:06.492] [INFO] error - [1900] 第七十一章：人王召见。（中秋快乐！阖家幸福！求订阅！！！） 写入失败！
  Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1026694115/[1900] 第七十一章：人王召见。（中秋快乐！阖家幸福！求订阅！！！）.md'
+[2022-09-11T11:09:35.689] [INFO] error - [1900] 第七十一章：人王召见。（中秋快乐！阖家幸福！求订阅！！！） 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1026694115/[1900] 第七十一章：人王召见。（中秋快乐！阖家幸福！求订阅！！！）.md'
+[2022-09-11T11:09:37.588] [INFO] error - [621] 第282节：巨大优势 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[621] 第282节：巨大优势.md'
+[2022-09-11T11:09:42.990] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-09-11T11:09:44.909] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
