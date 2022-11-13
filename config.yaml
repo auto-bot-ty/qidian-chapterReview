@@ -21,9 +21,8 @@ books:
     book_id: '1027630529'
     start: 3
 
-  - book_name: 道诡异仙
+  - book_name: 道诡异仙 (标记)
     book_id: '1031794030'
-    start: 2
 
   - book_name: 三国请回答！崩坏的三国演义
     book_id: '1028755947'
