@@ -612,3 +612,8 @@
 [2022-11-25T06:13:33.448] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2022-11-25T11:34:13.645] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1025901449&page=1&type=2&chapterId=736596218&_csrfToken=oEdEzSdui9nQSRmTzJ307fGU6vgNmM4MAN4HykRF&pageSize=3&segmentId=20 fail, retry attempt #1: RequestError: read ECONNRESET
 [2022-11-25T11:34:32.832] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-11-25T20:27:27.382] [INFO] error - TypeError: Cannot read property 'quoteContent' of undefined 
+ ---bookId: 1026694115 chapterName: [1975] 第一百三十六章：时机将至！（求订阅！！！）
+---response: {"code":0,"msg":"success","data":{"list":[],"total":4,"isEnd":1}}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2022-11-25T20:28:06.856] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
