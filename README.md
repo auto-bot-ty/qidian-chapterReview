@@ -11,7 +11,7 @@
 | 呢喃诗章 | [1027630529](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1027630529.md) | √ |  |  |
 | 道诡异仙 (标记) | [1031794030](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1031794030.md) | × |  |  |
 | 三国请回答！崩坏的三国演义 | [1028755947](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1028755947.md) | √ |  |  |
-| 我的治愈系游戏 | [1025901449](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1025901449.md) | √ |  |  |
+| 我的治愈系游戏 (标记) | [1025901449](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1025901449.md) | × |  |  |
 | 我的女友来自未来 | [1025656512](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1025656512.md) | √ |  |  |
 | 星门 (完结) | [1027669580](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1027669580.md) | × |  |  |
 | 五百个郭靖 (完结) | [1030653673](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1030653673.md) | × |  |  |
