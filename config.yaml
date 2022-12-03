@@ -1,10 +1,6 @@
 start: 0
 lock: 0
 books:
-  - book_name: 舌尖上的霍格沃茨
-    book_id: '1013293257'
-    start: 3
-
   - book_name: 洪荒历
     book_id: '1011940368'
     start: 3
@@ -21,19 +17,19 @@ books:
     book_id: '1027630529'
     start: 3
 
-  - book_name: 道诡异仙 (标记)
-    book_id: '1031794030'
-
   - book_name: 三国请回答！崩坏的三国演义
     book_id: '1028755947'
+    start: 3
+
+  - book_name: 我的女友来自未来
+    book_id: '1025656512'
     start: 3
 
   - book_name: 我的治愈系游戏 (标记)
     book_id: '1025901449'
 
-  - book_name: 我的女友来自未来
-    book_id: '1025656512'
-    start: 3
+  - book_name: 道诡异仙 (标记)
+    book_id: '1031794030'
 
   - book_name: 星门 (完结)
     book_id: '1027669580'
@@ -49,3 +45,6 @@ books:
 
   - book_name: 这个人仙太过正经 (完结)
     book_id: '1021635590'
+    
+  - book_name: 舌尖上的霍格沃茨 (完结)
+    book_id: '1013293257'
