@@ -664,3 +664,5 @@
 [2022-12-06T11:14:59.279] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2022-12-06T20:26:26.271] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1027630529&page=1&type=2&chapterId=738021451&_csrfToken=VWgFhftLwVeTd8o2siVhsNONWVjqJqmVVdED9fRD&pageSize=5&segmentId=5 fail, retry attempt #1: RequestError: read ECONNRESET
 [2022-12-06T20:26:55.728] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2022-12-07T06:12:48.188] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1013607299&page=1&type=2&chapterId=738037281&_csrfToken=HRXIemHLly4fTIJUfw7EV08X2oPYjMMFNqXhqyQx&pageSize=1&segmentId=2 fail, retry attempt #1: RequestError: Client network socket disconnected before secure TLS connection was established
+[2022-12-07T06:13:21.431] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
