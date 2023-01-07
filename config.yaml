@@ -1,9 +1,8 @@
 start: 0
 lock: 0
 books:
-  - book_name: 洪荒历
+  - book_name: 洪荒历 (标记)
     book_id: '1011940368'
-    start: 3
 
   - book_name: 我只想安静的做个苟道中人
     book_id: '1026694115'
