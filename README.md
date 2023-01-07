@@ -4,7 +4,7 @@
 ---- 
 | 书名 | 目录 | 是否更新 | 最后爬取时间 | 网址 |
 | --- | --- | --- | --- | --- |
-| 洪荒历 | [1011940368](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1011940368.md) | √ |  |  |
+| 洪荒历 (标记) | [1011940368](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1011940368.md) | × |  |  |
 | 我只想安静的做个苟道中人 | [1026694115](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1026694115.md) | √ |  |  |
 | 无限血核 | [1013607299](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1013607299.md) | √ |  |  |
 | 呢喃诗章 | [1027630529](https://github.com/auto-bot-ty/qidian-chapterReview/tree/master/docs/category/1027630529.md) | √ |  |  |
