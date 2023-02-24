@@ -1077,3 +1077,6 @@
 [2023-02-23T06:12:09.568] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-02-24T06:13:40.433] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-02-24T11:17:11.138] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-02-25T06:13:22.451] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1025656512&page=1&type=2&chapterId=744512630&_csrfToken=ukjc6p3mOzd4n1vqUMFlKepSzKdGkVrLRDIfA1Y5&pageSize=2&segmentId=98 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-02-25T06:13:22.475] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1025656512&page=1&type=2&chapterId=744512630&_csrfToken=ukjc6p3mOzd4n1vqUMFlKepSzKdGkVrLRDIfA1Y5&pageSize=1&segmentId=60 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-02-25T06:13:37.264] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
