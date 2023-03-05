@@ -20,9 +20,8 @@ books:
     book_id: '1028755947'
     start: 3
 
-  - book_name: 我的女友来自未来
+  - book_name: 我的女友来自未来 (标记)
     book_id: '1025656512'
-    start: 3
 
   - book_name: 我的治愈系游戏 (标记)
     book_id: '1025901449'
