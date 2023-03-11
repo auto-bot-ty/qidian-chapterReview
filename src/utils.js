@@ -24,14 +24,15 @@ const processChapterReview = async (chapterId, chapterName) => {
         pageSize,
         segmentId: item.segmentId,
       };
-      const response = await got(chapterReviewUrl, {
-        searchParams: new URLSearchParams(paramsList),
-      });
-      if(typeof(response.data.data) == "undefined") {
-        console.log(response.data);
-      }
-      const { list } = response.data.data;
+      let response
       try {
+        response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList), });
+      } catch (error) {
+        return `\n[${item.segmentId}] 抓取异常\n`;
+      }
+
+      try {
+        const { list } = response.data.data;
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
           `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
@@ -90,7 +91,7 @@ const getReviewSummary = async (chapterId) => {
 
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
-  if(typeof(csrfToken) == "undefined"){
+  if (typeof (csrfToken) == "undefined") {
     csrfToken = await fetchCsrfToken();
   }
   path = Path.resolve(__dirname, `../${outputPaths}/${bookId}`);
