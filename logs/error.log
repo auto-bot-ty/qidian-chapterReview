@@ -1126,3 +1126,1545 @@
 [2023-03-11T18:20:10.121] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-03-11T20:22:15.249] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-03-12T06:12:11.937] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-03-12T11:14:27.583] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746500442&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=139 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:27.790] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746500442&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=130 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.246] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=-10 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.356] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=2 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.443] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=2&segmentId=71 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.511] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=12 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.686] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=142 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.718] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=128 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.739] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=10&segmentId=135 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.741] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=104 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:41.814] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=143 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:14:48.526] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=2 fail, retry attempt #2: RequestError: read ECONNRESET
+[2023-03-12T11:14:49.010] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=746661593&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=142 fail, retry attempt #2: RequestError: read ECONNRESET
+[2023-03-12T11:14:50.913] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1026694115 chapterName: [2078] 第二百零五章：【蛮荒水患】。（求订阅！！！）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:14:51.359] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1026694115 chapterName: [2078] 第二百零五章：【蛮荒水患】。（求订阅！！！）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:14:53.045] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1026694115 chapterName: [2078] 第二百零五章：【蛮荒水患】。（求订阅！！！）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:14:59.618] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:14:59.791] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:14:59.802] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:14:59.846] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:00.107] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:00.142] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:00.281] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:00.365] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:00.518] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:01.680] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [811] 第451节：传奇级传承（700月票加更）
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:04.753] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:04.831] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:04.842] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:04.854] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:04.967] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:05.379] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:05.710] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:05.979] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:07.130] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:07.723] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:08.000] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:09.999] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1013607299&page=1&type=2&chapterId=746592680&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=5&segmentId=95 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:12.418] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [812] 第452节：电球弹心
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:19.717] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1013607299&page=1&type=2&chapterId=746592680&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=1 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:26.938] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&bookId=1013607299&chapterId=746657330 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:28.737] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [813] 请假
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:28.762] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1013607299 chapterName: [813] 请假
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:33.119] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1027630529 chapterName: [1569] 第一千五百四十八章 镜子与怪物
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:33.200] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1027630529 chapterName: [1569] 第一千五百四十八章 镜子与怪物
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:33.239] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1027630529 chapterName: [1569] 第一千五百四十八章 镜子与怪物
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:33.278] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1027630529 chapterName: [1569] 第一千五百四十八章 镜子与怪物
+---response: <script>
+    var seqid = "186D3D0530FFDE1F4D7EF97460FAA34C929D1970338"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-12T11:15:45.623] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&bookId=1027630529&chapterId=746593558 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:52.472] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1027630529&page=1&type=2&chapterId=746593558&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=3&segmentId=12 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:52.527] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1027630529&page=1&type=2&chapterId=746593558&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=48 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:52.558] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1027630529&page=1&type=2&chapterId=746593558&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=53 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:15:59.556] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1027630529&page=1&type=2&chapterId=746593558&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=1&segmentId=53 fail, retry attempt #2: RequestError: read ECONNRESET
+[2023-03-12T11:16:08.736] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1028755947&page=1&type=2&chapterId=739866215&_csrfToken=seujIqiQSBwdd5tJ7wyaohwfRYQmAHT1NPZJCbNw&pageSize=5&segmentId=-1 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-03-12T11:16:34.272] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
