@@ -4965,3 +4965,249 @@
 [2023-03-21T11:13:03.256] [INFO] error - Request https://m.qidian.com/majax/book/category?_csrfToken=yLEAoXCnQkeh2Wl3wqpMsY9Z45Wpzvo5xbrjiaYr&bookId=1026694115 fail, retry attempt #1: RequestError: read ECONNRESET
 [2023-03-21T11:13:14.113] [INFO] error - Request https://vipreader.qidian.com/ajax/chapterReview/reviewList?bookId=1026694115&page=1&type=2&chapterId=747303584&_csrfToken=yLEAoXCnQkeh2Wl3wqpMsY9Z45Wpzvo5xbrjiaYr&pageSize=1&segmentId=51 fail, retry attempt #1: RequestError: read ECONNRESET
 [2023-03-21T11:13:53.300] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-03-21T20:23:05.360] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1028755947 chapterName: [277] 第二百六十五章：田丰：我与曹操煮酒论英雄
+---response: <script>
+    var seqid = "187041F7D3282C65B192033456EB68AA6EB61140EC1"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-21T20:23:05.442] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1028755947 chapterName: [277] 第二百六十五章：田丰：我与曹操煮酒论英雄
+---response: <script>
+    var seqid = "187041F7D3282C65B192033456EB68AA6EB61140EC1"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-21T20:23:05.567] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1028755947 chapterName: [277] 第二百六十五章：田丰：我与曹操煮酒论英雄
+---response: <script>
+    var seqid = "187041F7D3282C65B192033456EB68AA6EB61140EC1"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-21T20:23:05.574] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1028755947 chapterName: [277] 第二百六十五章：田丰：我与曹操煮酒论英雄
+---response: <script>
+    var seqid = "187041F7D3282C65B192033456EB68AA6EB61140EC1"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-21T20:23:06.605] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1028755947 chapterName: [278] 第二百六十六章：田丰：想不想征服欧洲或者非洲
+---response: <script>
+    var seqid = "187041F7D3282C65B192033456EB68AA6EB61140EC1"
+</script>
+<script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+<script>
+    var captcha = new TencentCaptcha('2000490482', function(res){
+        var captchaResult = []
+        captchaResult.push(res.ret)
+
+        if(res.ret === 0){
+            captchaResult.push(res.ticket)
+            captchaResult.push(res.randstr)
+            captchaResult.push(seqid)
+        }
+
+        var content = captchaResult.join('\n')
+        loadXMLDoc("/WafCaptcha", content)
+    })
+
+    function loadXMLDoc(servPath, content) {
+        var xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", servPath, true);
+            xmlhttp.send(content);
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4) {
+                    if (xmlhttp.status == 200) {
+                        window.location.reload(true)
+                    }
+                }
+            }
+        }
+    }
+
+    captcha.show()
+
+</script>
+
+
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-03-21T20:23:18.779] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
