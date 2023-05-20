@@ -8093,3 +8093,49 @@
 ---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
 ---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
 [2023-05-20T06:11:18.149] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-05-20T11:11:57.522] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=Pz2r80VG8VUiCzs5age3T9Glk9lrCr5drimkbKVs&bookId=1027630529&chapterId=753796713 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-05-20T11:12:10.576] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1050] 第一千一十二章 起
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:10.642] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1050] 第一千一十二章 起
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:10.690] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1050] 第一千一十二章 起
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:12.409] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1051] 第一千一十三章 真假
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:12.538] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1051] 第一千一十三章 真假
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:12.574] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1051] 第一千一十三章 真假
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:14.089] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1052] 最后的公告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:14.148] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1052] 最后的公告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:14.190] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1052] 最后的公告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:14.198] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1052] 最后的公告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:14.594] [INFO] error - TypeError: Cannot destructure property 'list' of 'response.data.data' as it is undefined. 
+ ---bookId: 1031794030 chapterName: [1052] 最后的公告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+---chapterReviewUrl: https://vipreader.qidian.com/ajax/chapterReview/reviewList
+[2023-05-20T11:12:35.647] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
