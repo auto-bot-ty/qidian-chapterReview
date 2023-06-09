@@ -19,13 +19,13 @@ books:
   - book_name: 我的治愈系游戏 (标记)
     book_id: '1025901449'
 
-  - book_name: 道诡异仙 (标记)
-    book_id: '1031794030'
-    start: 3
-
   - book_name: 洪荒历 (标记)
     book_id: '1011940368'
     start: 3 
+
+  - book_name: 道诡异仙 (完结)
+    book_id: '1031794030'
+    start: 3
 
   - book_name: 星门 (完结)
     book_id: '1027669580'
