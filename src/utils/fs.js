@@ -84,8 +84,7 @@ const updateReadme = async () => {
     const url = `${git.remoteUrl().split(".git")[0]}/tree/${gitBranch}/docs/category/${i.book_id}.md`;
     i.start ?? (i.start = data.start);
     const stat = util.promisify(fs.stat);
-    
-    const pats = path.resolve(__dirname, `../../../../output/${i.book_id}`);
+    const pats = path.resolve(__dirname, `../../${outputPaths}/${i.book_id}`);
     console.log(pats);
     const stats = await stat(pats);
     const mtime = stats.mtime;
