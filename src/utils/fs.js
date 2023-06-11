@@ -1,4 +1,5 @@
 const fs = require("fs");
+const util = require('util');
 const path = require("path");
 const yaml = require("js-yaml");
 const git = require('git-rev-sync');
@@ -79,19 +80,40 @@ const template = `# 起点本章说
 const updateReadme = async () => {
   const data = yamltojson();
   if (!data) return;
-  const out = data.books.map((i) => {
+  const out = await Promise.all(data.books.map(async (i) => {
     const url = `${git.remoteUrl().split(".git")[0]}/tree/${gitBranch}/docs/category/${i.book_id}.md`;
-    i.start ?? (i.start = data.start)
-    return `| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} |  |  |`;
-  }).join("\n");
-  const readmePath = path.resolve(__dirname, "../../../README.md");
-  fs.writeFile(readmePath, template + "\n" + out, { flag: "w" }, (err) => {
+    i.start ?? (i.start = data.start);
+    const stat = util.promisify(fs.stat);
+    
+    const pats = path.resolve(__dirname, `../../output/${i.book_id}`);
+    console.log(pats);
+    const stats = await stat(pats);
+    const mtime = stats.mtime;
+    const formattedDate = formatDate(mtime);
+    console.log(`The folder was last modified on ${formattedDate}`);
+    return `| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} |  | ${formattedDate} |`;
+  }));
+  
+  const readmePath = path.resolve(__dirname, "../../README.md");
+  fs.writeFile(readmePath, template + "\n" + out.join("\n"), { flag: "w" }, (err) => {
     err
       ? errorLogger.info(`README.md 写入失败！\n ${err}`)
       : logger.info(`README.md 写入成功！`);
-  }
-  );
+  });
+};
+
+
+
+// 辅助函数：将日期对象格式化为 yyyy-MM-dd HH:mm 格式
+function formatDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hours}:${minutes}`;
 }
+
 module.exports = {
   writeFile,
   filePathisExist,
