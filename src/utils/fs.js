@@ -85,7 +85,7 @@ const updateReadme = async () => {
     i.start ?? (i.start = data.start);
     const stat = util.promisify(fs.stat);
     
-    const pats = path.resolve(__dirname, `../../output/${i.book_id}`);
+    const pats = path.resolve(__dirname, `../../../../output/${i.book_id}`);
     console.log(pats);
     const stats = await stat(pats);
     const mtime = stats.mtime;
