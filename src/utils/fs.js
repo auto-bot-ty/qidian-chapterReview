@@ -93,7 +93,7 @@ const updateReadme = async () => {
     const mtime = stats.mtime;
     const formattedDate = formatDate(mtime);
     console.log(`The folder was last modified on ${formattedDate}`);
-    out.push(`| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} | ${formattedDate} |  |`);
+    out.push(`| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} | ${mtime}-1 |  |`);
   }
 
   const readmePath = path.resolve(__dirname, "../../README.md");
