@@ -80,7 +80,10 @@ const template = `# 起点本章说
 const updateReadme = async () => {
   const data = yamltojson();
   if (!data) return;
-  const out = await Promise.all(data.books.map(async (i) => {
+
+  const out = [];
+  
+  for (const i of data.books) {
     const url = `${git.remoteUrl().split(".git")[0]}/tree/${gitBranch}/docs/category/${i.book_id}.md`;
     i.start ?? (i.start = data.start);
     const stat = util.promisify(fs.stat);
@@ -90,9 +93,9 @@ const updateReadme = async () => {
     const mtime = stats.mtime;
     const formattedDate = formatDate(mtime);
     console.log(`The folder was last modified on ${formattedDate}`);
-    return `| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} | ${formattedDate} |  |`;
-  }));
-  
+    out.push(`| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} | ${formattedDate} |  |`);
+  }
+
   const readmePath = path.resolve(__dirname, "../../README.md");
   fs.writeFile(readmePath, template + "\n" + out.join("\n"), { flag: "w" }, (err) => {
     err
@@ -100,6 +103,7 @@ const updateReadme = async () => {
       : logger.info(`README.md 写入成功！`);
   });
 };
+
 
 
 
