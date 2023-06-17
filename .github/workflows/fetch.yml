@@ -13,6 +13,7 @@ env:
   OUTPUT_PATH: ../output
   LOGS_PATH: ../logs
   CATEGORY_PATH: ../docs/category
+  README_PATH: ../../../README.md
   TZ: Asia/Shanghai
 
 jobs:
