@@ -3,7 +3,7 @@ const util = require('util');
 const path = require("path");
 const yaml = require("js-yaml");
 const git = require('git-rev-sync');
-const { outputPaths, categoryPaths, gitBranch } = require("@/utils/config").value;
+const { outputPaths, categoryPaths, readmePaths, gitBranch } = require("@/utils/config").value;
 const { logger, errorLogger } = require("@/utils/logger");
 
 const yamltojson = () => {
@@ -96,7 +96,7 @@ const updateReadme = async () => {
     out.push(`| ${i.book_name} | [${i.book_id}](${url}) | ${i.start == 0 ? "×" : "√"} | ${formattedDate}|  |`);
   }
 
-  const readmePath = path.resolve(__dirname, "../../README.md");
+  const readmePath = path.resolve(__dirname, readmePaths);
   fs.writeFile(readmePath, template + "\n" + out.join("\n"), { flag: "w" }, (err) => {
     err
       ? errorLogger.info(`README.md 写入失败！\n ${err}`)
