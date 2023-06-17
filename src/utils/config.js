@@ -7,6 +7,7 @@ let value = {
   outputPaths: envs.OUTPUT_PATH || "output",
   logsPaths: envs.LOGS_PATH || "logs",
   categoryPaths: envs.CATEGORY_PATH || "docs/category",
+  readmePaths: envs.README_PATH || "../../README.md",
   githubRepository: "auto-bot-ty/qidian-chapterReview",
   gitBranch: envs.DOWNSTREAM_BRANCH
 };
