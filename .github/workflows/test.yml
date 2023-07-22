@@ -5,16 +5,13 @@ on:
   push:
     branches:
       - dev
-    #paths:
-      #- '!**.yml'
-  #schedule:
-  #- cron: "00 3,12,22 * * *"
 
 env:
   DOWNSTREAM_BRANCH: test
   OUTPUT_PATH: ../output
   LOGS_PATH: ../logs
   CATEGORY_PATH: ../docs/category
+  README_PATH: ../../../README.md
   TZ: Asia/Shanghai
 
 jobs:
