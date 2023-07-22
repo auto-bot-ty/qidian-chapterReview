@@ -88,7 +88,10 @@ const updateReadme = async () => {
     i.start ?? (i.start = data.start);
     const stat = util.promisify(fs.stat);
     const pats = path.resolve(__dirname, `../../${outputPaths}/${i.book_id}`);
-    console.log(pats);
+    if (!fs.existsSync(pats)) {
+      errorLogger.info(`The folder does not exist: ${pats}`);
+      continue;
+    }
     const stats = await stat(pats);
     const mtime = stats.mtime;
     const formattedDate = formatDate(mtime);
