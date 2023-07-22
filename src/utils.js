@@ -1,11 +1,12 @@
 const Path = require("path");
 const got = require("@/utils/got");
 const { outputPaths, githubRepository } = require("@/utils/config").value;
-const { writeFile, filePathisExist } = require("@/utils/fs");
+const { writeFile } = require("@/utils/fs");
 const { logger, errorLogger } = require("@/utils/logger");
 let path;
 let bookId;
 let csrfToken;
+let headers;
 
 const processChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
@@ -26,13 +27,12 @@ const processChapterReview = async (chapterId, chapterName) => {
       };
       let response
       try {
-        response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList), });
+        response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList), },{headers});
       } catch (error) {
         return `\n[${item.segmentId}] 抓取异常\n`;
       }
-
       try {
-        const { list } = response.data.data;
+        const { list } = JSON.parse(response.body).data;
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
           `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
@@ -50,8 +50,8 @@ const processChapterReview = async (chapterId, chapterName) => {
 
 const getCatalog = async (bid, start, total, lock) => {
   await assignmentGlobalVariables(bid);
-  const categoryUrl = `https://m.qidian.com/majax/book/category?_csrfToken=${csrfToken}&bookId=${bookId}`;
-  const { data } = await got(categoryUrl).then((res) => res.data);
+  const categoryUrl = `https://m.qidian.com/majax/book/category?bookId=${bookId}&_csrfToken=${csrfToken}`;
+  const { data } = await got(categoryUrl,{headers}).then((res) => res.data);
   const { bookName } = data;
   logger.info(
     `${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
@@ -82,7 +82,7 @@ const getSlicesCatalog = (data, start, total, lock) => {
 
 const getReviewSummary = async (chapterId) => {
   const reviewSummaryUrl = `https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}`;
-  const reviewSummary = await got(reviewSummaryUrl).then(
+  const reviewSummary = await got(reviewSummaryUrl,{headers}).then(
     (res) => res.data.data.list
   );
   reviewSummary.sort((a, b) => a.segmentId - b.segmentId);
@@ -94,6 +94,9 @@ const assignmentGlobalVariables = async (bid) => {
   if (typeof (csrfToken) == "undefined") {
     csrfToken = await fetchCsrfToken();
   }
+  headers = {
+    'Cookie': `_csrfToken=${csrfToken}`
+  };
   path = Path.resolve(__dirname, `../${outputPaths}/${bookId}`);
 };
 // 获取 csrfToken
