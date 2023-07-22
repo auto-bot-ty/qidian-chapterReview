@@ -12,27 +12,19 @@ const processChapterReview = async (chapterId, chapterName) => {
   const reviewSummary = await getReviewSummary(chapterId);
   const out = await Promise.all(
     reviewSummary.map(async (item) => {
-      //const pageSize = item.reviewNum > 100 ? 100 : item.reviewNum;
-      const pageSize = item.reviewNum;
-      const chapterReviewUrl =
-        "https://vipreader.qidian.com/ajax/chapterReview/reviewList";
+      const chapterReviewUrl = "https://vipreader.qidian.com/ajax/chapterReview/reviewList";
       const paramsList = {
         bookId,
         page: 1,
         type: 2,
         chapterId,
         _csrfToken: csrfToken,
-        pageSize,
+        pageSize: item.reviewNum,
         segmentId: item.segmentId,
       };
-      let response
       try {
-        response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList), },{headers});
-      } catch (error) {
-        return `\n[${item.segmentId}] 抓取异常\n`;
-      }
-      try {
-        const { list } = JSON.parse(response.body).data;
+        const response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList) }, { headers });
+        const { data: { list } } = JSON.parse(response.body);
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
           `\n[${item.segmentId}] ${list[0].quoteContent.trim()}\n`,
@@ -51,19 +43,20 @@ const processChapterReview = async (chapterId, chapterName) => {
 const getCatalog = async (bid, start, total, lock) => {
   await assignmentGlobalVariables(bid);
   const categoryUrl = `https://m.qidian.com/majax/book/category?bookId=${bookId}&_csrfToken=${csrfToken}`;
-  const { data } = await got(categoryUrl,{headers}).then((res) => res.data);
-  const { bookName } = data;
+  const { data } = await got(categoryUrl, { headers })
+  const { data : {bookName, vs} } = data
   logger.info(
     `${bookName}  (${process.env.DOWNSTREAM_BRANCH || "local"
     }/${bookId}) \n================================`
   );
-  // if (!(await filePathisExist(path))) total = 1;
-  return getSlicesCatalog(data, start, total, lock);
+  return getSlicesCatalog(vs, start, total, lock);
 };
 
-const getSlicesCatalog = (data, start, total, lock) => {
+const getSlicesCatalog = (vs, start, total, lock) => {
   let catalogList = [];
-  data.vs.forEach((e) => (catalogList = [...catalogList, ...e.cs]));
+  for (const { cs } of vs) {
+    catalogList.push(...cs);
+  }
   if (lock) {
     logger.info("仅抓取付费章！");
     catalogList = catalogList.filter((e) => e.sS !== 1);
@@ -76,13 +69,13 @@ const getSlicesCatalog = (data, start, total, lock) => {
     start = githubActionsLimit;
     logger.info(`触发 demo 限制，重置 start 为 ${start}`);
   }
-  logger.info(`抓取${start === catalogList.length ? '全部，共' : '最新'} ${start} 章`);
+  logger.info(`抓取${start === catalogList.length ? "全部，共" : "最新"} ${start} 章`);
   return catalogList.slice(-start);
 };
 
 const getReviewSummary = async (chapterId) => {
   const reviewSummaryUrl = `https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=${csrfToken}&bookId=${bookId}&chapterId=${chapterId}`;
-  const reviewSummary = await got(reviewSummaryUrl,{headers}).then(
+  const reviewSummary = await got(reviewSummaryUrl, { headers }).then(
     (res) => res.data.data.list
   );
   reviewSummary.sort((a, b) => a.segmentId - b.segmentId);
@@ -91,11 +84,11 @@ const getReviewSummary = async (chapterId) => {
 
 const assignmentGlobalVariables = async (bid) => {
   bookId = bid;
-  if (typeof (csrfToken) == "undefined") {
+  if (typeof (csrfToken) === "undefined") {
     csrfToken = await fetchCsrfToken();
   }
   headers = {
-    'Cookie': `_csrfToken=${csrfToken}`
+    Cookie: `_csrfToken=${csrfToken}`,
   };
   path = Path.resolve(__dirname, `../${outputPaths}/${bookId}`);
 };
