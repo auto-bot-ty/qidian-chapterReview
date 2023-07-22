@@ -22,8 +22,9 @@ const processChapterReview = async (chapterId, chapterName) => {
         pageSize: item.reviewNum,
         segmentId: item.segmentId,
       };
+      let response;
       try {
-        const response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList) }, { headers });
+        response = await got(chapterReviewUrl, { searchParams: new URLSearchParams(paramsList) }, { headers });
         const { data: { list } } = JSON.parse(response.body);
         const content = list.map((item) => `>--- ${item.content.trim()}<br>\n`);
         const quoteContent = [
@@ -31,7 +32,7 @@ const processChapterReview = async (chapterId, chapterName) => {
         ];
         return [...quoteContent, ...content];
       } catch (err) {
-        const msg = `---bookId: ${bookId} chapterName: ${chapterName}\n---response: ${response.body}\n---chapterReviewUrl: ${chapterReviewUrl}`;
+        const msg = `---bookId: ${bookId} chapterName: ${chapterName}\n---response: ${response.body}\n`;
         errorLogger.info(`${err} \n ${msg}`);
         return `\n[${item.segmentId}] invalid list\n`;
       }
