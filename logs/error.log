@@ -1876,3 +1876,54 @@
 [2023-07-23T00:21:35.172] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-07-23T00:21:37.959] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
 [2023-07-23T00:21:38.890] [INFO] error - The folder does not exist: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013009467
+[2023-07-23T00:32:56.182] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1013293257 chapterName: [1625] 第1311章 煎蛋（全书完）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:05.590] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1026694115 chapterName: [2108] 大结局：今开道路证至位，诸天来朝拜冕旒！（求订阅！！！）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:06.019] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1026694115 chapterName: [2108] 大结局：今开道路证至位，诸天来朝拜冕旒！（求订阅！！！）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:17.115] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1037] 第1000章 欢迎来到完美人生（终章）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:17.118] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1037] 第1000章 欢迎来到完美人生（终章）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:17.140] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1037] 第1000章 欢迎来到完美人生（终章）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:18.046] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:18.079] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:18.116] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:19.219] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:19.238] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:19.239] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-07-23T00:33:27.895] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-07-23T00:33:31.042] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
+[2023-07-23T00:33:32.096] [INFO] error - The folder does not exist: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013009467
