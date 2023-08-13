@@ -13359,3 +13359,6 @@
 [2023-08-13T20:18:24.844] [INFO] error - [986] 第613节：5份零级秘令（补更8/11） 写入失败！
  Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[986] 第613节：5份零级秘令（补更8/11）.md'
 [2023-08-13T20:18:56.489] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-08-14T06:09:39.908] [INFO] error - [986] 第613节：5份零级秘令（补更8/11） 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[986] 第613节：5份零级秘令（补更8/11）.md'
+[2023-08-14T06:10:17.872] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
