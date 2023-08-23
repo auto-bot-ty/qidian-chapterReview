@@ -13413,3 +13413,13 @@
 
 [2023-08-23T11:12:12.362] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-08-23T20:21:33.885] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-08-24T06:10:14.206] [INFO] error - Request https://read.qidian.com/ajax/chapterReview/reviewSummary?_csrfToken=qA7uiCyfNyESubTdpljFqkkipIo947tO0E0ECaP0&bookId=1027630529&chapterId=763998286 fail, retry attempt #1: RequestError: read ECONNRESET
+[2023-08-24T06:10:26.514] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-08-24T06:10:28.212] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1951] 终于完结洪荒历了。
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-08-24T06:10:49.491] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
