@@ -13797,3 +13797,24 @@
 ---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
 
 [2023-09-01T11:12:41.904] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-09-01T20:20:44.916] [INFO] error - [1007] 第631节：围杀大个子（补更9/11） 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[1007] 第631节：围杀大个子（补更9/11）.md'
+[2023-09-01T20:20:46.940] [INFO] error - [1008] 第632节：神的注视（补更10/11） 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[1008] 第632节：神的注视（补更10/11）.md'
+[2023-09-01T20:21:00.322] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1949] 第二十九章：盘古开天地
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-01T20:21:01.702] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-01T20:21:02.146] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-01T20:21:03.239] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1951] 终于完结洪荒历了。
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-01T20:21:25.310] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
