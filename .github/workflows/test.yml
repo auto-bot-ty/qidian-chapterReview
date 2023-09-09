@@ -5,7 +5,9 @@ on:
   push:
     branches:
       - dev
-
+    paths-ignore:
+      - .github/workflows
+      - README.md
 env:
   DOWNSTREAM_BRANCH: test
   OUTPUT_PATH: ../output
