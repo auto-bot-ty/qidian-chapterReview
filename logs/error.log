@@ -1927,3 +1927,58 @@
 [2023-07-23T00:33:27.895] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-07-23T00:33:31.042] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
 [2023-07-23T00:33:32.096] [INFO] error - The folder does not exist: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013009467
+[2023-09-09T21:48:44.306] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1013293257 chapterName: [1625] 第1311章 煎蛋（全书完）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:48:48.312] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:48:48.731] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:48:49.584] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1951] 终于完结洪荒历了。
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:04.508] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1037] 第1000章 欢迎来到完美人生（终章）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:04.512] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1037] 第1000章 欢迎来到完美人生（终章）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:04.615] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1037] 第1000章 欢迎来到完美人生（终章）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:05.665] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:05.670] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:05.680] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:06.674] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:06.702] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:06.730] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-09T21:49:14.042] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-09-09T21:49:16.408] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
+[2023-09-09T21:49:17.191] [INFO] error - The folder does not exist: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013009467
