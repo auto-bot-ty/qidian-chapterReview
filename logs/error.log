@@ -14258,3 +14258,16 @@
 ---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
 
 [2023-09-12T11:12:25.773] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-09-12T20:21:57.905] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-12T20:21:57.936] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-12T20:21:59.082] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1951] 终于完结洪荒历了。
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-12T20:22:24.852] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
