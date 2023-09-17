@@ -1982,3 +1982,52 @@
 [2023-09-09T21:49:14.042] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-09-09T21:49:16.408] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
 [2023-09-09T21:49:17.191] [INFO] error - The folder does not exist: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013009467
+[2023-09-17T15:14:40.663] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1013293257 chapterName: [1625] 第1311章 煎蛋（全书完）
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:14:47.726] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:14:48.340] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1950] 终章：我们人类……一定会回来！！
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:14:49.403] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1951] 终于完结洪荒历了。
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:14:49.533] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1011940368 chapterName: [1951] 终于完结洪荒历了。
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:14:57.873] [INFO] error - [1023] 第646节：冰殃（补更11/11） 写入失败！
+ Error: ENOENT: no such file or directory, open '/home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013607299/[1023] 第646节：冰殃（补更11/11）.md'
+[2023-09-17T15:15:08.090] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:15:08.092] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:15:08.094] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1038] 番外 预告
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:15:09.405] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:15:09.419] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:15:09.449] [INFO] error - TypeError: Cannot read property 'list' of undefined 
+ ---bookId: 1025901449 chapterName: [1039] 番外 终究要长大的小孩
+---response: {"code":10004,"msg":"\u6279\u91cf\u8f6c\u6362\u7edf\u4e00\u7528\u6237id\u5931\u8d25(10004)"}
+
+[2023-09-17T15:15:19.483] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-09-17T15:15:22.325] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1027669580TypeError: Cannot read property '1' of null
+[2023-09-17T15:15:23.230] [INFO] error - The folder does not exist: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1013009467
