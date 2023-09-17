@@ -3,11 +3,11 @@ name: Test
 on:
   workflow_dispatch:
   push:
-    branches:
-      - dev
+    branches: [dev]
     paths-ignore:
       - .github/workflows
       - README.md
+
 env:
   DOWNSTREAM_BRANCH: test
   OUTPUT_PATH: ../output
@@ -52,7 +52,7 @@ jobs:
 
       - name: Set git identity
         run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "github-actions@noreply.github.com"
           git config --global user.name "github-actions"
 
       - name: Commit files
