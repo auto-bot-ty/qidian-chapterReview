@@ -15915,3 +15915,4 @@
 
 [2023-10-15T11:12:27.589] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
 [2023-10-15T20:21:11.090] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
+[2023-10-16T06:10:43.567] [ERROR] error - ---bookid: /home/runner/work/qidian-chapterReview/qidian-chapterReview/output/1016150754TypeError: Cannot read property '1' of null
