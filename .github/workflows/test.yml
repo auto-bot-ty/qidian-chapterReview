@@ -50,10 +50,8 @@ jobs:
           cp config.yaml $PWD/$(basename $PWD)
           cd $PWD/$(basename $PWD)/src && node index
 
-      - name: Set git identity
-        run: |
-          git config --global user.email "github-actions@noreply.github.com"
-          git config --global user.name "github-actions"
+      - name: Setup GIT user
+        uses: fregante/setup-git-user@v1
 
       - name: Commit files
         run: |
